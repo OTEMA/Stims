@@ -29,38 +29,46 @@ A breech of this may lead to prosecution.
                     </button>
                     <div class="collapse navbar-collapse navHeaderCollapse">
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="active"><a href="index.html">Home</a></li>
-                            <li><a href="#">Contact us</a></li>
+                            <li class="active"><a href="index.html"><img src="resources/images/home.ico" alt="Home" class="image-responsive icon"/></a></li>
+                            <li class="dropdown">
+                                <a href="#" data-toggle="dropdown" class="dropdown-toggle"><img src="resources/images/login.png" alt="Login" class="image-responsive icon"/> <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="admin/Login.php"> <img src="resources/images/admin.png" alt="Admin Login" class="image-responsive icon"/><i>Admin Login</i></a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="student/Login.php"> <img src="resources/images/student-xxl.png" alt="Student Login" class="image-responsive icon"/><i>Student Login</i></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#"> <img src="resources/images/contact.png" alt="Contact us" class="image-responsive icon"/></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div id="body">
-            <div class="rows">
-                <div class="col-md-2">
-                    <p><b>Welcome to the exam results portal</b></p>
-                    <p>This system allows you to view your results and fee balance.
-                        <br> Lecturers and teachers can also upload the results easily and the accounts department can show fees transparency.</p>
-                    <p><b class="bg-note">New users:</b> Please click <a href="pages/register_user.php">Register Now</a> and enter the requested information. Upon successful registration, you will be sent an email with instructions and your log-in information.</p>
-                    <p><b class="bg-note">Existing users:</b> Do not register again. Simply enter your username and password and click the Investigator log in button. If you have forgotten your details please click <a href="password_reset.php">Forgot Password.</a></p>
+                <div class="rows">
+                    <div class="col-md-2">
+                        <p><b>Welcome to the exam results portal</b></p>
+                        <p>This system allows you to view your results and fee balance.
+                            <br> Lecturers and teachers can also upload the results easily and the accounts department can show fees transparency.</p>
+                        <p><b class="bg-note">New users:</b> Please click <a href="pages/register_user.php">Register Now</a> and enter the requested information. Upon successful registration, you will be sent an email with instructions and your log-in information.</p>
+                        <p><b class="bg-note">Existing users:</b> Do not register again. Simply enter your username and password and click the Investigator log in button. If you have forgotten your details please click <a href="password_reset.php">Forgot Password.</a></p>
+                    </div>
+                    <div class="col-md-8 well">
+                        <form action="" method="post">
+                            <div class="form-group">
+                                <label for="uname">User name</label>
+                                <input type="text" class="form-control" id="uname"autocomplete="on" placeholder="Enter your user name" required="required">
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Password</label>
+                                <input type="password" id="pwd" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" class="form-control btn-primary" value="Login">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-2"></div>
                 </div>
-                <div class="col-md-8 well">
-                    <form action="" method="post">
-                        <div class="form-group">
-                            <label for="uname">User name</label>
-                            <input type="text" class="form-control" id="uname"autocomplete="on" placeholder="Enter your user name" required="required">
-                        </div>
-                        <div class="form-group">
-                            <label for="pwd">Password</label>
-                            <input type="password" id="pwd" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" class="form-control btn-primary" value="Login">
-                        </div>
-                    </form>
-                </div>
-                <div class="col-md-2"></div>
-            </div>
             </div>
         </div>
     </body>
