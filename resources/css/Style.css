@@ -1,10 +1,41 @@
-/*
-This application is property of Otema and is licenced under otema ©2017
-No part of it whatsoever shall be shared or used unless under written permission by Otema
-A breech of this may lead to prosecution.
-*/
-/* 
-    Created on : Mar 17, 2017, 11:05:36 AM
-    Author     : Maseno
-*/
+.affix {
+    top: 0;
+    width: 100%;
+}
 
+.affix {
+    padding-top: 70px;
+}
+.header-image{
+    width: 103%;
+    margin-left:-25px;
+}
+.header-text{
+    margin-top:-50px;
+ }
+ .brand-img{
+     height: 50px;
+     width:80px;
+     margin-top:-10px;
+ }
+ .bg-note{
+     background-color: #ff6633;
+ }
+ .img-header{
+    width: 100px;
+    height: 100px;
+    margin-top: 50px;
+    margin-bottom: -25px;
+}
+.wel{
+    border: 1px solid cadetblue;
+}
+h1.heading1{
+    border: 10px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url(../images/bottom-border.png) 30 stretch; /* Safari 3.1-5 */
+    -o-border-image: url(../images/bottom-border.png) 30 stretch; /* Opera 11-12.1 */
+    border-image: url(../images/bottom-border.png) 30 stretch;
+    color:#006666;
+    font-family: 'Merriweather', serif;
+}
