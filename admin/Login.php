@@ -8,9 +8,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <script type="application/x-javascript"> 
             addEventListener("load", function() { 
-                setTimeout(hideURLbar, 0); }, false);
+            setTimeout(hideURLbar, 0); }, false);
             function hideURLbar(){ 
-                window.scrollTo(0,1); } </script>
+            window.scrollTo(0,1); } </script>
         <!-- //custom-theme -->
         <link href="../resources/css/Style.css" rel="stylesheet" type="text/css"/>
         <link href="../resources/css/bootstrap.css" rel="stylesheet" type="text/css"/>
@@ -60,6 +60,11 @@
                     </div>
                     <div class="form-group">
                         <input type="submit" class="form-control btn-primary" value="Login">
+                    </div>
+                    <div class="form-group">
+                        <div class="slide-left">
+                            <p>Never fight an inanimate object.</p>
+                        </div>
                     </div>
                 </form>
             </div>
