@@ -171,8 +171,13 @@ nav.navbar.navbar-default {
     height: 100px;
 }
 div.slide-left {
-  width:100%;
+    clear: both;
   overflow:hidden;
+  float: bottom;
+  background-color: #000033;
+ margin-top: -5px;
+ border-radius: 1%;
+ color: #FFFFFF;
 }
 div.slide-left p {
   animation: slide-left 10s;
