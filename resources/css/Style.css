@@ -170,7 +170,7 @@ nav.navbar.navbar-default {
     width: 100px;
     height: 100px;
 }
-div.slide-left {
+div.slideleft {
     clear: both;
   overflow:hidden;
   float: bottom;
