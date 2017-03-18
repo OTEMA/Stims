@@ -38,9 +38,8 @@
 
             ga('create', 'UA-40923671-1', 'lakehub.co.ke');
             ga('send', 'pageview');
-
         </script>
-    </head>
+           </head>
     <body>
         <div id="container">
             <img src="../resources/images/msu_banner2.png" class="image-responsive header-image"/>
@@ -48,8 +47,8 @@
         </div>
         <div class="rows">
             <div class="col-sm-6 col-md-3"></div>
-            <div class="col-sm-6 col-md-7 login">
-                <form action="" method="post">
+            <div class="col-sm-6 col-md-7">
+                <form action="" method="post" class="login">
                     <div class="form-group">
                         <label for="uname">User name</label>
                         <input type="text" class="form-control" id="uname"autocomplete="on" placeholder="Enter your user name" required="required">
@@ -61,13 +60,12 @@
                     <div class="form-group">
                         <input type="submit" class="form-control btn-primary" value="Login">
                     </div>
-                    <div class="form-group">
-                        <div class="slide-left">
-                            <p>Never fight an inanimate object.</p>
-                        </div>
-                    </div>
                 </form>
+                <div class="slide-left">
+                    <p>All rights reserved <span id="year"></span> Lamo.</p>
+                </div>
             </div>
         </div>
+        <script src="../resources/js/Copyright.js" type="text/javascript"></script>
     </body>
 </html>
