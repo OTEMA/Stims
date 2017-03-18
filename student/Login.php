@@ -8,9 +8,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <script type="application/x-javascript"> 
             addEventListener("load", function() { 
-                setTimeout(hideURLbar, 0); }, false);
+            setTimeout(hideURLbar, 0); }, false);
             function hideURLbar(){ 
-                window.scrollTo(0,1); } </script>
+            window.scrollTo(0,1); } </script>
         <!-- //custom-theme -->
         <link href="../resources/css/Style.css" rel="stylesheet" type="text/css"/>
         <link href="../resources/css/bootstrap.css" rel="stylesheet" type="text/css"/>
@@ -40,7 +40,7 @@
             ga('send', 'pageview');
 
         </script>
-    </head>
+            </head>
     <body>
         <div id="container">
             <img src="../resources/images/msu_banner2.png" class="image-responsive header-image"/>
@@ -48,8 +48,8 @@
         </div>
         <div class="rows">
             <div class="col-sm-6 col-md-3"></div>
-            <div class="col-sm-6 col-md-7 login">
-                <form action="" method="post">
+            <div class="col-sm-6 col-md-7 ">
+                <form action="" method="post" class="login">
                     <div class="form-group">
                         <label for="uname">User name</label>
                         <input type="text" class="form-control" id="uname"autocomplete="on" placeholder="Enter your user name" required="required">
@@ -62,7 +62,12 @@
                         <input type="submit" class="form-control btn-primary" value="Login">
                     </div>
                 </form>
+                <div class="slide-left">
+                    <p><img src="../resources/images/maseno20university.png" alt="Maseno Logo" class="image-responsive copyright-image"/> All rights reserved <span id="year"></span> Lamo.<img src="../resources/images/maseno20university.png" alt="Maseno Logo" class="image-responsive copyright-image"/></p>
+                    
+                </div>
             </div>
         </div>
+        <script src="../resources/js/Copyright.js" type="text/javascript"></script>
     </body>
 </html>
