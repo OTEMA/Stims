@@ -1,4 +1,3 @@
-
     var year = new Date().getFullYear();
     document.getElementById("year").innerHTML = year;
     
@@ -13,8 +12,6 @@
       window.slideleft ($(this));
     });
 };
-
-
 $(document).ready(function() {
     var i = 0;
     $("#slideleft  > div").each(function () {
