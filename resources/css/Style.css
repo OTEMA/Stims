@@ -179,11 +179,11 @@ div.slide-left {
  border-radius: 1%;
  color: #FFFFFF;
 }
-div.slide-left p {
-  animation: slide-left 10s;
+div.slideleft p {
+  animation: slideleft 10s;
 }
 
-@keyframes slide-left {
+@keyframes slideleft {
   from {
     margin-left: 100%;
     width: 300%; 
