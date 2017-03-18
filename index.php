@@ -1,13 +1,9 @@
 <!DOCTYPE html>
-<!--
-This application is property of Otema and is licenced under otema ©2017
-No part of it whatsoever shall be shared or used unless under written permission by Otema
-A breech of this may lead to prosecution.
--->
+
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>Home|Welcome</title>
         <link href="resources/css/Style.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -19,6 +15,7 @@ A breech of this may lead to prosecution.
         <div id="container">
             <img src="resources/images/msu_banner2.png" class="image-responsive header-image"/>
             <h1 class="text-center text-primary header-text">Welcome to the results portal!</h1>
+        </div>
             <div class="navbar navbar-inverse navbar-static-top" data-spy="affix" data-offset-top="197" style="width: 100%; margin-top: -3.2px; padding: 0;">
                 <div class="container">
                     <a href="http://www.maseno.ac.ke" class="navbar-brand">Online Results </a>
