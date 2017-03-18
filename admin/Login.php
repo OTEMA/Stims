@@ -39,7 +39,7 @@
             ga('create', 'UA-40923671-1', 'lakehub.co.ke');
             ga('send', 'pageview');
         </script>
-           </head>
+    </head>
     <body>
         <div id="container">
             <img src="../resources/images/msu_banner2.png" class="image-responsive header-image"/>
@@ -61,8 +61,8 @@
                         <input type="submit" class="form-control btn-primary" value="Login">
                     </div>
                 </form>
-                <div class="slide-left">
-                    <p>All rights reserved <span id="year"></span> Lamo.</p>
+                <div class="slideleft">
+                    <p><img src="../resources/images/maseno20university.png" alt="Maseno Logo" class="image-responsive copyright-image"/> All rights reserved <span id="year"></span> Lamo.<img src="../resources/images/maseno20university.png" alt="Maseno Logo" class="image-responsive copyright-image"/></p>
                 </div>
             </div>
         </div>
