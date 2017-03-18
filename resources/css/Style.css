@@ -12,16 +12,16 @@
 }
 .header-text{
     margin-top:-50px;
- }
- .brand-img{
-     height: 50px;
-     width:80px;
-     margin-top:-10px;
- }
- .bg-note{
-     background-color: #ff6633;
- }
- .img-header{
+}
+.brand-img{
+    height: 50px;
+    width:80px;
+    margin-top:-10px;
+}
+.bg-note{
+    background-color: #ff6633;
+}
+.img-header{
     width: 100px;
     height: 100px;
     margin-top: 50px;
@@ -45,34 +45,34 @@ h1.heading1{
 }
 html, body{
     font-size: 100%;
-	font-family: 'Open Sans', sans-serif;
-	background:#ffffff;
-	margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background:#ffffff;
+    margin: 0;
 }
 p,ul li,ol li{
-	margin:0;
-	font-size:14px;
+    margin:0;
+    font-size:14px;
 }
 h1,h2,h3,h4,h5,h6{
-	font-family: 'Cabin', sans-serif;
-	margin:0;
+    font-family: 'Cabin', sans-serif;
+    margin:0;
 }
 ul,label{
-	margin:0;
-	padding:0;
+    margin:0;
+    padding:0;
 }
 body a:hover{
-	text-decoration:none;
+    text-decoration:none;
 }
 input[type="submit"],input[type="reset"],a,.w3l_banner_bottom_grid1 i,.w3layouts_more a i{
-	-webkit-transition: 0.5s ease-in;
+    -webkit-transition: 0.5s ease-in;
     -moz-transition: 0.5s ease-in;
     -ms-transition: 0.5s ease-in;
     -o-transition: 0.5s ease-in;
     transition:0.5s ease-in;
 }
 a:focus{
-	outline:none;
+    outline:none;
 }
 /*-- nav --*/
 .navbar-default {
@@ -93,12 +93,12 @@ a:focus{
     background:none;
 }
 .navbar-default .navbar-nav > .active > a:before{
-	background: #000033;
-	transform: translateX(0);
-	-webkit-transform: translateX(0);
-	-moz-transform: translateX(0);
-	-o-transform: translateX(0);
-	-ms-transform: translateX(0);
+    background: #000033;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
+    -ms-transform: translateX(0);
 }
 .navbar-default .navbar-nav > li > a {
     font-weight: 500;
@@ -114,7 +114,7 @@ a:focus{
 }
 .navbar-default .navbar-nav > li > a:focus {
     color: #ff6633;
-	outline:none;
+    outline:none;
 }
 nav.navbar.navbar-default {
     background: none;
@@ -131,8 +131,8 @@ nav.navbar.navbar-default {
     color: #fff;
 }
 .navbar-default .navbar-nav  > .active.open > a:focus {
-	background:transparent;
-	color: #000033;
+    background:transparent;
+    color: #000033;
 }
 .navbar-default .navbar-brand,.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
     color: #000033;
@@ -147,23 +147,22 @@ nav.navbar.navbar-default {
     text-transform: uppercase;
 }
 .navbar-brand span{
-	color: #000033;
+    color: #000033;
     font-size: 1.5em;
     display: inline-block;
     padding: 0 .7em 0 .7em;
     vertical-align: middle;
 }
 .navbar-brand i{
-	display:inline-block;
-	vertical-align:middle;
-	font-style:normal;
+    display:inline-block;
+    vertical-align:middle;
+    font-style:normal;
 }
 .login{
     margin-top: 50px;
     padding: 25px;
     border-radius: 1%;
-    border: 5px solid #000033;
-    
+    border: 5px solid #000033; 
 }
 .btn-primary{
     border-radius: 50%;
@@ -172,27 +171,26 @@ nav.navbar.navbar-default {
 }
 div.slideleft {
     clear: both;
-  overflow:hidden;
-  float: bottom;
-  background-color: #000033;
- margin-top: -5px;
- border-radius: 1%;
- color: #FFFFFF;
+    overflow:hidden;
+    float: bottom;
+    background-color: #000033;
+    margin-top: -5px;
+    border-radius: 1%;
+    color: #FFFFFF;
 }
 div.slideleft p {
-  animation: slideleft 10s;
+    animation: slideleft 10s;
 }
-
 @keyframes slideleft {
-  from {
-    margin-left: 100%;
-    width: 300%; 
-  }
+    from {
+        margin-left: 100%;
+        width: 300%; 
+    }
 
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
 }
 .copyright-image{
     width: 25px;
@@ -200,29 +198,27 @@ div.slideleft p {
 }
 .slideleft {
     margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-  transform: translate3d(0, 0, 0);
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
 }
-
 .slideleft > p {
     position: absolute;
-  top: 0;
-  left: 0;
-   transform: translate3d(0, 0, 0);
+    top: 0;
+    left: 0;
+    transform: translate3d(0, 0, 0);
 }
 .slideleft .mover-1 {
-  animation: moveSlideshow 12s linear infinite;
+    animation: moveSlideshow 12s linear infinite;
 }
 .slideleft .mover-2 {
-  opacity: 0;
-  transition: opacity 0.5s ease-out;
-  background-position: 0 -200px;
-  animation: moveSlideshow 15s linear infinite;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+    background-position: 0 -200px;
+    animation: moveSlideshow 15s linear infinite;
 }
-
 @keyframes slideleft{
-  100% { 
-    transform: translateX(-66.6666%);  
-  }
+    100% { 
+        transform: translateX(-66.6666%);  
+    }
 }
