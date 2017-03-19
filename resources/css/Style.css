@@ -170,6 +170,8 @@ nav.navbar.navbar-default {
     height: 100px;
 }
 div.slideleft {
+    display: block;
+    white-space: nowrap;
     clear: both;
     overflow:hidden;
     float: bottom;
@@ -179,46 +181,19 @@ div.slideleft {
     color: #FFFFFF;
 }
 div.slideleft p {
-    animation: slideleft 10s;
+    display: inline-block;
+    padding-left: 100%;
+    animation: slideleft 5s infinite;
 }
-@keyframes slideleft {
-    from {
-        margin-left: 100%;
-        width: 300%; 
-    }
-
-    to {
-        margin-left: 0%;
-        width: 100%;
-    }
+@keyframes slideleft { //works on all browsers
+            0%{
+                -webkit-transform: translate(0, 0);
+            }
+            100%{
+                 -webkit-transform: translate(-100%, 0);
+            }
 }
 .copyright-image{
     width: 25px;
     height: 25px;
-}
-.slideleft {
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-    transform: translate3d(0, 0, 0);
-}
-.slideleft > p {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate3d(0, 0, 0);
-}
-.slideleft .mover-1 {
-    animation: moveSlideshow 12s linear infinite;
-}
-.slideleft .mover-2 {
-    opacity: 0;
-    transition: opacity 0.5s ease-out;
-    background-position: 0 -200px;
-    animation: moveSlideshow 15s linear infinite;
-}
-@keyframes slideleft{
-    100% { 
-        transform: translateX(-66.6666%);  
-    }
 }
