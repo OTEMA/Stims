@@ -63,7 +63,7 @@
                         <input type="password" id="pwd" class="form-control">
                     </div>
                     <div class="form-group">
-                        <input type="submit" class="form-control btn-primary" value="Login">
+                        <input type="submit" class="form-control btn-primary login" value="Login">
                     </div>
                     <div class="form-group">
                     <a href="Reset_Password.php" style="clear: both; margin: auto; padding: 10px;">
