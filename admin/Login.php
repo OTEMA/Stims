@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <title>Admin|Home</title>
-        <!-- custom-theme -->
+        <link rel="shortcut icon" href="../resources/images/student-portal_icon.png"  type="image/x-icon"/>
+            <!-- custom-theme -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <script type="application/x-javascript"> 
