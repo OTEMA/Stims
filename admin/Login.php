@@ -63,7 +63,7 @@
                 </form>
                 <div class="slideleft">
                     <p><img src="../resources/images/maseno20university.png" alt="Maseno Logo" class="image-responsive copyright-image"/> All rights reserved © <span id="year"></span> Lamo.<img src="../resources/images/maseno20university.png" alt="Maseno Logo" class="image-responsive copyright-image"/>
-                    All rights reserved © <span id="year1"></span> Lamo.<img src="../resources/images/maseno20university.png" alt="Maseno Logo" class="image-responsive copyright-image"/></p>
+                    </p>
                  </div>
             </div>
         </div>
