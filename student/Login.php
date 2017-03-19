@@ -44,10 +44,13 @@
     <body>
         <div id="container">
             <img src="../resources/images/msu_banner2.png" class="image-responsive header-image"/>
-            <h1 class="text-center text-primary header-text">Welcome to the Admin portal!</h1>
+            <h1 class="text-center text-primary header-text">Welcome to the Student portal!</h1>
         </div>
         <div class="rows">
-            <div class="col-sm-6 col-md-3"></div>
+            <div class="col-sm-6 col-md-3">
+                <p class="notice"><b class=" text-capitalize text-primary bg-note">For first time login </b>
+                    Please use your admission Number as username and National Identity card number as password</p>
+            </div>
             <div class="col-sm-6 col-md-7 ">
                 <form action="" method="post" class="login">
                     <div class="form-group">
