@@ -64,6 +64,11 @@
                     <div class="form-group">
                         <input type="submit" class="form-control btn-primary" value="Login">
                     </div>
+                    <div class="form-group">
+                    <a href="Reset_Password.php" style="clear: both; margin: auto; padding: 10px;">
+                        <img src="../resources/images/ForgotPassword.jpg" alt="Forgot Password" class="image-responsive fpwd"/>
+                    </a>
+                    </div>
                 </form>
                 <div class="slideleft">
                     <p><img src="../resources/images/maseno20university.png" alt="Maseno Logo" class="image-responsive copyright-image"/> All rights reserved © <span id="year"></span> Lamo.<img src="../resources/images/maseno20university.png" alt="Maseno Logo" class="image-responsive copyright-image"/>
