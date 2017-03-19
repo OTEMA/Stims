@@ -1,6 +1,6 @@
     var year = new Date().getFullYear();
     document.getElementById("year").innerHTML = year;
-    document.getElementById("year1").innerHTML = year;
+    
     
     window.slideleft = function($elem) {
     var top = parseInt($elem.css("top"));
