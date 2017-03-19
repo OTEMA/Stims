@@ -4,7 +4,8 @@
     <head>
         <meta charset="UTF-8">
         <title>Home|Welcome</title>
-        <link href="resources/css/Style.css" rel="stylesheet" type="text/css"/>
+        <link rel="shortcut icon" href="resources/images/student-portal_icon.png"  type="image/x-icon"/>
+    <link href="resources/css/Style.css" rel="stylesheet" type="text/css"/>
         <link href="resources/css/font-awesome.css" rel="stylesheet" type="text/css"/>
         <link href="resources/css/bootstrap.css" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
