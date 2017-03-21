@@ -51,5 +51,29 @@ A breech of this may lead to prosecution.
             <img src="../resources/images/msu_banner2.png" class="image-responsive header-image"/>
             <h1 class="text-center text-primary header-text">You are here > Reset password</h1>
         </div>
+         <div class="rows">
+            <div class="col-sm-6 col-md-4">
+                
+            </div>  
+            <div class="col-sm-6 col-md-5">
+                <form action="" method="post" class="reset">
+                     <div class="form-group">
+                        <label for="opwd">Old Password</label>
+                        <input type="text" class="form-control" id="opwd" autocomplete="on" placeholder="Enter your user name" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">New Password</label>
+                        <input type="password" id="npwd" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Confirm New Password</label>
+                        <input type="password" id="cnpwd" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="form-control btn-primary login" value="Submit">
+                    </div>
+        </form>
+            </div>
+        </div>
     </body>
 </html>
