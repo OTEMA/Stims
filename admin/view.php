@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>Admin|View</title>
     <link rel="shortcut icon" href="../resources/images/student-portal_icon.png"  type="image/x-icon"/>
             <!-- custom-theme -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
