@@ -186,12 +186,12 @@ div.slideleft p {
     animation: slideleft 5s infinite linear;
 }
 @keyframes slideleft { //works on all browsers
-            0%{
-                -webkit-transform: translate(0, 0);
-            }
-            100%{
-                 -webkit-transform: translate(-100%, 0);
-            }
+                       0%{
+                           -webkit-transform: translate(0, 0);
+                       }
+                       100%{
+                           -webkit-transform: translate(-100%, 0);
+                       }
 }
 .copyright-image{
     width: 25px;
@@ -203,7 +203,14 @@ div.slideleft p {
 .fpwd{
     width: 100px;
     height: 100px;
-       }
-       .login{
-            background-image: url("../resources/images/Login.jpg");
-       }
+}
+.loginbtn{
+    background-image: url("../resources/images/Login.jpg");
+}
+.reset{
+margin-top: 100px;
+margin-top: 50px;
+    padding: 25px;
+    border-radius: 1%;
+    border: 5px solid #000033; 
+}
