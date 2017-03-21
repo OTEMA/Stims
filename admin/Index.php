@@ -37,7 +37,7 @@
                 m.parentNode.insertBefore(a, m);
             })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-            ga('create', 'UA-40923671-1', 'lakehub.co.ke');
+            ga('create', 'UA-40923671-1', 'url');
             ga('send', 'pageview');
         </script>
     </head>
@@ -46,6 +46,7 @@
             <img src="../resources/images/msu_banner2.png" class="image-responsive header-image"/>
             <h1 class="text-center text-primary header-text">You are here > Reset password</h1>
         </div>
+        
        
     </body>
 </html>
