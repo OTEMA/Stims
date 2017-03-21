@@ -65,7 +65,7 @@
                         <input type="submit" class="form-control btn-primary login" value="Login">
                     </div>
                     <div class="form-group">
-                    <a href="Reset_Password.php" style="clear: both; margin: auto; padding: 10px;">
+                    <a href="../ForgotPassword.php">
                         <img src="../resources/images/ForgotPassword.jpg" alt="Forgot Password" class="image-responsive fpwd"/>
                     </a>
                     </div>
@@ -75,6 +75,7 @@
                     </p>
                  </div>
             </div>
+            
         </div>
         <script src="../resources/js/Copyright.js" type="text/javascript"></script>
     </body>
