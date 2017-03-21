@@ -1,13 +1,8 @@
 <!DOCTYPE html>
-<!--
-This application is property of Otema and is licenced under otema ©2017
-No part of it whatsoever shall be shared or used unless under written permission by Otema
-A breech of this may lead to prosecution.
--->
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>Admin|Reset Password</title>
     <link rel="shortcut icon" href="../resources/images/student-portal_icon.png"  type="image/x-icon"/>
             <!-- custom-theme -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
