@@ -44,7 +44,7 @@
     <body>
         <div id="container">
             <img src="../resources/images/msu_banner2.png" class="image-responsive header-image"/>
-            <h1 class="text-center text-primary header-text">You are here > Reset password</h1>
+            <h1 class="text-center text-primary header-text">You are here ></h1>
         </div>
         
        
