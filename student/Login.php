@@ -53,7 +53,7 @@
                     Please use your admission Number as username and National Identity card number as password</p>
             </div>
             <div class="col-sm-6 col-md-7 ">
-                <form action="" method="post" class="login">
+                <form action="../Controller/Student_Login_controller.php" method="POST" class="login">
                     <div class="form-group">
                         <label for="uname">User name</label>
                         <input type="text" class="form-control" id="uname"autocomplete="on" placeholder="Enter your user name" required="required">
