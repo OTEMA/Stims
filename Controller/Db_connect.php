@@ -5,6 +5,6 @@ $password = "";
 $db = "stims";
 
 $conn = mysqli_connect($host, $user, $password, $db );
-if(!conn){
+if(!$conn){
     die("Unable to connect: ".mysqli_connect_error());
 }
