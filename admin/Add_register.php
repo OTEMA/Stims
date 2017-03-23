@@ -98,7 +98,7 @@
                     </div>
                     <div class="form-group">
                         <label for="Tel">Telephone</label>
-                        <input type="text" class="form-control" id="Tel" name="Tel" autocomplete="on" placeholder="Enter telephone number" required="required">
+                        <input type="Tel" class="form-control" id="Tel" name="Tel" autocomplete="on" placeholder="Enter telephone number" required="required">
                     </div>
                     <div class="form-group">
                         <label for="Email">Email</label>
@@ -109,7 +109,7 @@
                         <input type="password" id="pwd" class="form-control">
                     </div>
                     <div class="form-group">
-                        <input type="submit" class="form-control btn-primary login" value="Login">
+                        <input type="submit" class="form-control btn-primary login" value="Register">
                     </div>
                 </form>
                 <div class="slideleft">
