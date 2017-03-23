@@ -4,5 +4,7 @@ $user = "root";
 $password = "";
 $db = "stims";
 
-$conn = new mysqli($host, $user, $password, $db ) or die($mysqli->error);
-
+$conn =  new mysqli($host,$user,$password,$db) or die($mysqli->error);
+if(mysql_errno()){
+    die("Unable to connect to the database: ".mysqli_connect_error()); 
+}
