@@ -1,4 +1,5 @@
 <?php
+
 include 'Db_connect.php';
 // Set session variables to be used on profile.php page
 $_SESSION['Email'] = $_POST['Email'];
@@ -30,7 +31,8 @@ if ( $result->num_rows > 0 ) {
     
 }
 else { // Email doesn't already exist in a database, proceed...
-$sql = "INSERT INTO students(Fname, Mname, Lname, AdmNo, DOB, DOA, IdNo, School, Dept, Course, Tel, Email, Password) VALUES ('$Fname', '$Mname', '$Lname', '$AdmNo', '$date', '$date1', '$IdNo', '$SC', '$Dept', '$Course', '$Tel', '$Email', '$pwd')";
+$sql = "INSERT INTO students(Fname, Mname, Lname, AdmNo, DOB, DOA, IdNo, School, Dept, Course, Tel, Email, Password)"
+        . " VALUES ('$Fname', '$Mname', '$Lname', '$AdmNo', '$date', '$date1', '$IdNo', '$SC', '$Dept', '$Course', '$Tel', '$Email', '$pwd')";
  // Add user to the database
     if ( $mysqli->query($sql) ){
 
@@ -51,7 +53,7 @@ $sql = "INSERT INTO students(Fname, Mname, Lname, AdmNo, DOB, DOA, IdNo, School,
 
         Please click this link to activate your account:
 
-        http://localhost/login-system/verify.php?email='.$email.'&hash='.$hash;  
+        http://localhost/login-system/verify.php?email='.$Email.'&hash='.$hash;  
 
         mail( $to, $subject, $message_body );
 
