@@ -105,10 +105,6 @@
                         <input type="Email" class="form-control" id="Email" name="Email" autocomplete="on" placeholder="Enter Email" required="required">
                     </div>
                     <div class="form-group">
-                        <label for="pwd">Password</label>
-                        <input type="password" id="pwd" class="form-control">
-                    </div>
-                    <div class="form-group">
                         <input type="submit" class="form-control btn-primary login" value="Register">
                     </div>
                 </form>
