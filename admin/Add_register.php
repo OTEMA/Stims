@@ -2,16 +2,11 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
-    <link rel="shortcut icon" href="../resources/images/student-portal_icon.png"  type="image/x-icon"/>
+        <title>Register a user</title>
+        <link rel="shortcut icon" href="../resources/images/student-portal_icon.png"  type="image/x-icon"/>
         <!-- custom-theme -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <script type="application/x-javascript"> 
-            addEventListener("load", function() { 
-            setTimeout(hideURLbar, 0); }, false);
-            function hideURLbar(){ 
-            window.scrollTo(0,1); } </script>
         <!-- //custom-theme -->
         <link href="../resources/css/Style.css" rel="stylesheet" type="text/css"/>
         <link href="../resources/css/bootstrap.css" rel="stylesheet" type="text/css"/>
@@ -24,6 +19,13 @@
         <!-- //font-awesome-icons -->
         <link href="//fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext,vietnamese" rel="stylesheet">
         <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+        <!-- Include jQuery -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+        <!-- Include Date Range Picker -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
         <script>
             (function (i, s, o, g, r, a, m) {
                 i['GoogleAnalyticsObject'] = r;
@@ -47,5 +49,73 @@
             <img src="../resources/images/msu_banner2.png" class="image-responsive header-image"/>
             <h1 class="text-center text-primary header-text">Welcome to the Student portal!</h1>
         </div>
-    </body>
-</html>
+        <div class="rows">
+            <div class="col-sm-6 col-md-3">
+                <p class="notice"><b class=" text-capitalize text-primary bg-note">For first time login </b>
+                    Please use your admission Number as username and National Identity card number as password</p>
+            </div>
+            <div class="col-sm-6 col-md-7 ">
+                <form action="../Controller/Registration_controller.php" method="POST" class="login">
+                    <div class="form-group">
+                        <label for="Fname">First Name</label>
+                        <input type="text" class="form-control" id="Fname" name="Fname" autocomplete="on" placeholder="Enter your First name" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="Mname">Middle Name</label>
+                        <input type="text" class="form-control" id="Mname" name="Mname" autocomplete="on" placeholder="Enter your Middle name" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="Lname">Last Name</label>
+                        <input type="text" class="form-control" id="Lname" name="Lname" autocomplete="on" placeholder="Enter your Last name" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="AdmNo">Admission Number</label>
+                        <input type="text" class="form-control" id="AdmNo" name="AdmNo" autocomplete="on" placeholder="Enter your Admission" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="DOB">Date of Birth</label>
+                        <input class="form-control" id="DOB"  name="date" placeholder="MM/DD/YYYY" required="required" type="text"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="DOA">Date of Admission</label>
+                        <input class="form-control" id="DOA"  name="date1" placeholder="MM/DD/YYYY" required="" type="text"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="IdNo">National Identity Number</label>
+                        <input type="text" class="form-control" id="IdNo" name="IdNo" autocomplete="on" placeholder="Enter your National Identity Number" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="SC">School</label>
+                        <input type="text" class="form-control" id="SC" name="SC" autocomplete="on" placeholder="Enter The name of school" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="Dept">Department</label>
+                        <input type="text" class="form-control" id="Dept" name="Dept" autocomplete="on" placeholder="Enter The name of Department" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="Course">Course</label>
+                        <input type="text" class="form-control" id="Course" name="Course" autocomplete="on" placeholder="Enter The name of course" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="Tel">Telephone</label>
+                        <input type="text" class="form-control" id="Tel" name="Tel" autocomplete="on" placeholder="Enter telephone number" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="Email">Email</label>
+                        <input type="Email" class="form-control" id="Email" name="Email" autocomplete="on" placeholder="Enter Email" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Password</label>
+                        <input type="password" id="pwd" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="form-control btn-primary login" value="Login">
+                    </div>
+                </form>
+                <div class="slideleft">
+                    <p><img src="../resources/images/maseno20university.png" alt="Maseno Logo" class="image-responsive copyright-image"/> All rights reserved © <span id="year"></span> Lamo.<img src="../resources/images/maseno20university.png" alt="Maseno Logo" class="image-responsive copyright-image"/>
+                    </p>
+                </div>
+                <script src="../resources/js/Copyright.js" type="text/javascript"></script>
+                </body>
+                </html>
