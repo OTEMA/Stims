@@ -7,21 +7,21 @@ $_SESSION['Fname'] = $_POST['Fname'];
 $_SESSION['Lname'] = $_POST['Lname'];
 
 // Escape all $_POST variables to protect against SQL injections
-$Fname = $mysqli->escape_string($_POST['Fname']);
-$Mname = $mysqli->escape_string($_POST['Mname']);
-$Lname = $mysqli->escape_string($_POST['Lname']);
-$AdmNo = $mysqli->escape_string($_POST['AdmNo']);
-$date = $mysqli->escape_string($_POST['date']);
-$date1 = $mysqli->escape_string($_POST['date1']);
-$IdNo = $mysqli->escape_string($_POST['IdNo']);
-$SC = $mysqli->escape_string($_POST['SC']);
-$Dept = $mysqli->escape_string($_POST['Dept']);
-$Course = $mysqli->escape_string($_POST['Course']);
-$Tel = $mysqli->escape_string($_POST['Tel']);
-$Email = $mysqli->escape_string($_POST['Email']);
-$pwd = $mysqli->escape_string($_POST['IdNo']);
+$Fname = $conn->escape_string($_POST['Fname']);
+$Mname = $conn->escape_string($_POST['Mname']);
+$Lname = $conn->escape_string($_POST['Lname']);
+$AdmNo = $conn->escape_string($_POST['AdmNo']);
+$date = $conn->escape_string($_POST['date']);
+$date1 = $conn->escape_string($_POST['date1']);
+$IdNo = $conn->escape_string($_POST['IdNo']);
+$SC = $conn->escape_string($_POST['SC']);
+$Dept = $conn->escape_string($_POST['Dept']);
+$Course = $conn->escape_string($_POST['Course']);
+$Tel = $conn->escape_string($_POST['Tel']);
+$Email = $conn->escape_string($_POST['Email']);
+$pwd = $conn->escape_string($_POST['IdNo']);
 // Check if user with that email already exists
-$result = $mysqli->query("SELECT * FROM students WHERE AdmNo='$AdmNo'") or die($mysqli->error());
+$result = $conn->query("SELECT * FROM students WHERE AdmNo='$AdmNo'") or die($conn->error());
 
 // We know user email exists if the rows returned are more than 0
 if ( $result->num_rows > 0 ) {
@@ -34,7 +34,7 @@ else { // Email doesn't already exist in a database, proceed...
 $sql = "INSERT INTO students(Fname, Mname, Lname, AdmNo, DOB, DOA, IdNo, School, Dept, Course, Tel, Email, Password)"
         . " VALUES ('$Fname', '$Mname', '$Lname', '$AdmNo', '$date', '$date1', '$IdNo', '$SC', '$Dept', '$Course', '$Tel', '$Email', '$pwd')";
  // Add user to the database
-    if ( $mysqli->query($sql) ){
+    if ( $conn->query($sql) ){
 
         $_SESSION['active'] = 0; //0 until user activates their account with verify.php
         $_SESSION['logged_in'] = true; // So we know the user has logged in
