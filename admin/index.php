@@ -114,19 +114,15 @@ session_start();
                             </label>
                             <input type="password"required autocomplete="off" name='password'/>
                         </div>
-
                         <button type="submit" class="button button-block" name="register" />Register</button>
-
                     </form>
-
                 </div>  
-
             </div><!-- tab-content -->
-            <div class="slideleft">
-                <p><img src="../resources/images/maseno20university.png" alt="Maseno Logo" class="image-responsive copyright-image"/> All rights reserved © <span id="year"></span> Lamo.<img src="../resources/images/maseno20university.png" alt="Maseno Logo" class="image-responsive copyright-image"/>
-                </p>
-            </div>     
         </div> <!-- /form -->
+        <div class="slideleft1">
+            <p><img src="../resources/images/maseno20university.png" alt="Maseno Logo" class="image-responsive copyright-image"/> All rights reserved © <span id="year"></span> Lamo.<img src="../resources/images/maseno20university.png" alt="Maseno Logo" class="image-responsive copyright-image"/>
+            </p>
+        </div>
         <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
         <script src="../resources/js/index.js"></script>
         <script src="../resources/js/Copyright.js" type="text/javascript"></script>
