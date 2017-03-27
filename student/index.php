@@ -45,37 +45,36 @@ session_start();
     ?>
     <body>
         <div class="form">
-                             
-                    <h1>Welcome Back!</h1>
 
-                    <form action="index.php" method="post" autocomplete="off">
+            <h1>Welcome Back!</h1>
 
-                        <div class="field-wrap">
-                            <label>
-                                Email Address<span class="req">*</span>
-                            </label>
-                            <input type="email" required autocomplete="off" name="email"/>
-                        </div>
+            <form action="index.php" method="post" autocomplete="off">
 
-                        <div class="field-wrap">
-                            <label>
-                                Password<span class="req">*</span>
-                            </label>
-                            <input type="password" required autocomplete="off" name="password"/>
-                        </div>
+                <div class="field-wrap">
+                    <label>
+                        Email Address<span class="req">*</span>
+                    </label>
+                    <input type="email" required autocomplete="off" name="email"/>
+                </div>
 
-                        <p class="forgot"><a href="forgot.php">Forgot Password?</a></p>
+                <div class="field-wrap">
+                    <label>
+                        Password<span class="req">*</span>
+                    </label>
+                    <input type="password" required autocomplete="off" name="password"/>
+                </div>
 
-                        <button class="button button-block" name="login" />Log In</button>
+                <p class="forgot"><a href="forgot.php">Forgot Password?</a></p>
 
-                    </form>
-                     <div class="slideleft">
-                    <p><img src="../resources/images/maseno20university.png" alt="Maseno Logo" class="image-responsive copyright-image"/> All rights reserved © <span id="year"></span> Lamo.<img src="../resources/images/maseno20university.png" alt="Maseno Logo" class="image-responsive copyright-image"/>
-                    </p>
-</div>     
-            </div> <!-- /form -->
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script src="../resources/js/index.js"></script>
-    <script src="../resources/js/Copyright.js" type="text/javascript"></script>
-</body>
+                <button class="button button-block" name="login" />Log In</button>
+            </form>
+                       </div> <!-- /form -->
+         <div class="slideleft">
+                <p><img src="../resources/images/maseno20university.png" alt="Maseno Logo" class="image-responsive copyright-image"/> All rights reserved © <span id="year"></span> Lamo.<img src="../resources/images/maseno20university.png" alt="Maseno Logo" class="image-responsive copyright-image"/>
+                </p>
+            </div> 
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script src="../resources/js/index.js"></script>
+        <script src="../resources/js/Copyright.js" type="text/javascript"></script>
+    </body>
 </html>
