@@ -69,7 +69,7 @@ a:hover {
 
 h1 {
     text-align: center;
-    color: #ffffff;
+    color: #FFFFFF;
     font-weight: 300;
     margin: 0 0 40px;
 }
@@ -172,8 +172,51 @@ textarea {
     float: left;
     width: 48%;
     margin-right: 4%;
+    margin-bottom: 15px;
 }
 .top-row > div:last-child {
+    margin: 0;
+}
+.middle-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.middle-row > div {
+    float: left;
+    width: 48%;
+    margin-right: 4%;
+    margin-bottom: 15px;
+}
+.middle-row > div:last-child {
+    margin: 0;
+}
+.center-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.center-row > div {
+    float: left;
+    width: 48%;
+    margin-right: 4%;
+    margin-bottom: 15px;
+}
+.center-row > div:last-child {
+    margin: 0;
+}
+.bottom-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.bottom-row > div {
+    float: left;
+    width: 48%;
+    margin-right: 4%;
+    margin-bottom: 15px;
+}
+.bottom-row > div:last-child {
     margin: 0;
 }
 
@@ -252,12 +295,12 @@ textarea {
     animation: slideleft 5s infinite linear;
 }
 @keyframes slideleft1 { //works on all browsers
-                       0%{
-                           -webkit-transform: translate(0, 0);
-                       }
-                       100%{
-                           -webkit-transform: translate(-100%, 0);
-                       }
+                        0%{
+                            -webkit-transform: translate(0, 0);
+                        }
+                        100%{
+                            -webkit-transform: translate(-100%, 0);
+                        }
 }
 .copyright-image{
     width: 25px;
