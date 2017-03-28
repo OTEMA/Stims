@@ -22,3 +22,11 @@ $(document).ready(function () {
         autoclose: true
     });
 });
+function passwordChecker(){
+    var password = document.getElementById('pwd').value;
+    var confirmPassword = document.getElementById('cpwd').value;
+    if(password == confirmPassword){
+        alert("Passwords Must match");
+        
+    }
+    }
