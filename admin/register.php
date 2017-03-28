@@ -9,20 +9,14 @@ $_SESSION['first_name'] = $_POST['firstname'];
 $_SESSION['last_name'] = $_POST['lastname'];
 
 // Escape all $_POST variables to protect against SQL injections
-$first_name = $mysqli->escape_string($_POST['firstname']);
-$Mname = $conn->escape_string($_POST['Mname']);
-$last_name = $mysqli->escape_string($_POST['lastname']);
-$Lname = $conn->escape_string($_POST['Lname']);
-$AdmNo = $conn->escape_string($_POST['AdmNo']);
-$date = $conn->escape_string($_POST['date']);
-$date1 = $conn->escape_string($_POST['date1']);
-$IdNo = $conn->escape_string($_POST['IdNo']);
-$SC = $conn->escape_string($_POST['SC']);
-$Dept = $conn->escape_string($_POST['Dept']);
-$Course = $conn->escape_string($_POST['Course']);
-$Tel = $conn->escape_string($_POST['Tel']);
+$first_name = $mysqli->escape_string($_POST['Fname']);
+$Mname = $mysqli->escape_string($_POST['Mname']);
+$last_name = $mysqli->escape_string($_POST['Lname']);
+$StaffNo = $mysqli->escape_string($_POST['StaffNo']);
+$IdNo = $mysqli->escape_string($_POST['IdNo']);
+$Tel = $mysqli->escape_string($_POST['Tel']);
 $email = $mysqli->escape_string($_POST['email']);
-$password = $mysqli->escape_string(password_hash($_POST['password'], PASSWORD_BCRYPT));
+$password = $mysqli->escape_string(password_hash($_POST['Password'], PASSWORD_BCRYPT));
 $hash = $mysqli->escape_string( md5( rand(0,1000) ) );
       
 // Check if user with that email already exists
