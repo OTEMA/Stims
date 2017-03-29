@@ -56,20 +56,20 @@ session_start();
                 <div id="login">   
                     <h1>Welcome Back!</h1>
 
-                    <form action="index.php" method="post" autocomplete="off">
+                    <form action="index.php" method="post">
 
                         <div class="field-wrap">
                             <label>
                                 Email Address<span class="req">*</span>
                             </label>
-                            <input type="email" required autocomplete="off" name="email"/>
+                            <input type="email" required autocomplete="on" name="email" style="color: #FFFFFF;" />
                         </div>
 
                         <div class="field-wrap">
                             <label>
                                 Password<span class="req">*</span>
                             </label>
-                            <input type="password" required autocomplete="off" name="password"/>
+                            <input type="password" required autocomplete="off" name="password" style="color: #FFFFFF;" />
                         </div>
 
                         <p class="forgot"><a href="forgot.php">Forgot Password?</a></p>
@@ -81,38 +81,71 @@ session_start();
                 </div>
 
                 <div id="signup">   
-                    <h1>Sign Up for Free</h1>
+                    <h1 style="color: #FFFFFF;">Sign Up Here</h1>
 
-                    <form action="index.php" method="post" autocomplete="off">
+                    <form action="index.php" method="post">
 
                         <div class="top-row">
-                            <div class="field-wrap">
+                            <div class="form-group field-wrap">
                                 <label>
                                     First Name<span class="req">*</span>
                                 </label>
-                                <input type="text" required autocomplete="off" name='firstname' />
+                                <input type="text" required autocomplete="on" name='firstname' style="color: #FFFFFF;" />
                             </div>
-
-                            <div class="field-wrap">
+                            <div class="form-group field-wrap">
                                 <label>
-                                    Last Name<span class="req">*</span>
+                                    Middle Name<span class="req">*</span>
                                 </label>
-                                <input type="text"required autocomplete="off" name='lastname' />
+                                <input type="text" required autocomplete="on" name='Mname' style="color: #FFFFFF;" />
+                            </div>                                                    
+                        </div>
+                        <div class="form-group field-wrap">
+                            <label>
+                                Last Name<span class="req">*</span>
+                            </label>
+                            <input type="text"required autocomplete="on" name='lastname' style="color: #FFFFFF;" />
+                        </div>
+                        <div class="middle-row">
+                            <div class="form-group field-wrap">
+                                <label>
+                                    Staff ID<span class="req">*</span>
+                                </label>
+                                <input type="text" required autocomplete="on" name='Staffno' style="color: #FFFFFF;" />
+                            </div>
+                            <div class="form-group field-wrap">
+                                <label>
+                                    National ID<span class="req">*</span>
+                                </label>
+                                <input type="text" required autocomplete="on" name='IdNo' style="color: #FFFFFF;" />
                             </div>
                         </div>
-
-                        <div class="field-wrap">
-                            <label>
-                                Email Address<span class="req">*</span>
-                            </label>
-                            <input type="email"required autocomplete="off" name='email' />
+                        <div class="center-row">
+                            <div class="form-group field-wrap">
+                                <label>
+                                    Telephone Number<span class="req">*</span>
+                                </label>
+                                <input type="text" required autocomplete="on" name='Tel' style="color: #FFFFFF;"/>
+                            </div>
+                            <div class="form-group field-wrap">
+                                <label>
+                                    Email Address<span class="req">*</span>
+                                </label>
+                                <input type="email"required autocomplete="on" name='email' style="color: #FFFFFF;" />
+                            </div>
                         </div>
-
-                        <div class="field-wrap">
-                            <label>
-                                Set A Password<span class="req">*</span>
-                            </label>
-                            <input type="password"required autocomplete="off" name='password'/>
+                        <div class="bottom-row">
+                            <div class="form-group field-wrap">
+                                <label>
+                                    Set A Password<span class="req">*</span>
+                                </label>
+                                <input type="password"required autocomplete="off" name='password' id="pwd" style="color: #FFFFFF;" />
+                            </div>
+                            <div class="form-group field-wrap">
+                                <label>
+                                    Confirm Password<span class="req">*</span>
+                                </label>
+                                <input type="password" required autocomplete="off" name='PWD' id="cpwd" style="color: #FFFFFF;" onkeydown="passwordChecker() onkeyup="passwordChecker()" />
+                            </div>
                         </div>
                         <button type="submit" class="button button-block" name="register" />Register</button>
                     </form>
