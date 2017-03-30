@@ -25,8 +25,13 @@ $(document).ready(function () {
 function passwordChecker(){
     var password = document.getElementById('pwd').value;
     var confirmPassword = document.getElementById('cpwd').value;
-    if(password == confirmPassword){
-        alert("Passwords Must match");
+    if(password !== confirmPassword){
+        document.getElementById('pwd').style.borderColor='#ff0000';
+        document.getElementById('cpwd').style.borderColor='#ff0000';
         
+    }
+    else{
+      document.getElementById('pwd').style.borderColor='#1ab188';
+        document.getElementById('cpwd').style.borderColor='#1ab188';  
     }
     }
