@@ -125,6 +125,7 @@ label.active {
     transform: translateY(50px);
     left: 2px;
     font-size: 14px;
+    
 }
 label.active .req {
     opacity: 0;
@@ -133,7 +134,6 @@ label.active .req {
 label.highlight {
     color: #ffffff;
 }
-
 input, textarea {
     font-size: 22px;
     display: block;
@@ -147,6 +147,7 @@ input, textarea {
     border-radius: 0;
     -webkit-transition: border-color .25s ease, box-shadow .25s ease;
     transition: border-color .25s ease, box-shadow .25s ease;
+    margin-bottom: 10px;
 }
 input:focus, textarea:focus {
     outline: 0;
@@ -305,4 +306,7 @@ textarea {
 .copyright-image{
     width: 25px;
     height: 25px;
+}
+.form-group{
+    padding-bottom: 25px;
 }

@@ -25,13 +25,17 @@ $(document).ready(function () {
 function passwordChecker(){
     var password = document.getElementById('pwd').value;
     var confirmPassword = document.getElementById('cpwd').value;
-    if(password !== confirmPassword){
-        document.getElementById('pwd').style.borderColor='#ff0000';
-        document.getElementById('cpwd').style.borderColor='#ff0000';
+    if(password === confirmPassword){
+        document.getElementById('pwd').style.borderColor='#a0b3b0';
+        document.getElementById('cpwd').style.borderColor='#1ab188';
+        document.getElementById('pwd').style.boxShadow='None';
+        document.getElementById('cpwd').style.boxShadow='None';
         
     }
     else{
-      document.getElementById('pwd').style.borderColor='#1ab188';
-        document.getElementById('cpwd').style.borderColor='#1ab188';  
+      document.getElementById('pwd').style.borderColor='#ff0000';
+      document.getElementById('pwd').style.boxShadow='0 4px 10px 4px rgba(255, 0, 0, 0.3)';
+        document.getElementById('cpwd').style.borderColor='#ff0000';
+        document.getElementById('cpwd').style.boxShadow='0 4px 10px 4px rgba(255, 0, 0, 0.3)';
     }
     }

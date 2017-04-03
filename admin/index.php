@@ -1,12 +1,11 @@
 <?php
-/* Main page with two forms: sign up and log in */
 require '../Controller/db.php';
 session_start();
 ?>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Sign-Up/Login Form</title>
+        <title>Admin|Sign-Up/Login Form</title>
         <link href="../resources/css/Appearance.css" rel="stylesheet" type="text/css"/>
         <link href="../resources/css/bootstrap.css" rel="stylesheet" type="text/css"/>
         <link href="../resources/css/font-awesome.css" rel="stylesheet" type="text/css"/>
@@ -54,7 +53,7 @@ session_start();
             <div class="tab-content">
 
                 <div id="login">   
-                    <h1>Welcome Back!</h1>
+                    <h1 style="color: #FFFFFF;">Welcome Back!</h1>
 
                     <form action="index.php" method="post">
 
@@ -144,7 +143,7 @@ session_start();
                                 <label>
                                     Confirm Password<span class="req">*</span>
                                 </label>
-                                <input type="password" required autocomplete="off" name='PWD' id="cpwd" style="color: #FFFFFF;" onkeydown="passwordChecker() onkeyup="passwordChecker()" />
+                                <input type="password" required autocomplete="off" name='PWD' id="cpwd" style="color: #FFFFFF;" onkeypress="passwordChecker()" onkeyup="passwordChecker()" />
                             </div>
                         </div>
                         <button type="submit" class="button button-block" name="register" />Register</button>
