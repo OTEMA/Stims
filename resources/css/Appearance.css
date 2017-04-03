@@ -310,3 +310,10 @@ textarea {
 .form-group{
     padding-bottom: 25px;
 }
+.header{
+    background-image: url('../images/msu_banner2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    margin-top: 20px;
+}
