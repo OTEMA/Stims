@@ -47,36 +47,30 @@ if ($_SESSION['logged_in'] != 1) {
         </script>
     </head>
     <body>
-        <div class="container">
-
-            <h1>Welcome</h1>
-
+        <div class="container-fluid header">
             <p>
-<?php
+                <?php
 // Display message about account verification link only once
-if (isset($_SESSION['message'])) {
-    echo $_SESSION['message'];
+                if (isset($_SESSION['message'])) {
+                    echo $_SESSION['message'];
 
-    // Don't annoy the user with more messages upon page refresh
-    unset($_SESSION['message']);
-}
-?>
+                    // Don't annoy the user with more messages upon page refresh
+                    unset($_SESSION['message']);
+                }
+                ?>
             </p>
 
-                <?php
-                // Keep reminding the user this account is not active, until they activate
-                if (!$active) {
-                    echo
-                    '<div class="info">
+            <?php
+            // Keep reminding the user this account is not active, until they activate
+            if (!$active) {
+                echo
+                '<div class="info">
               Account is unverified, please confirm your email by clicking
               on the email link!
               </div>';
-                }
-                ?>
-            <h2><?php echo $first_name . ' ' . $last_name; ?></h2>
-            <p><?= $email ?></p>
-            <img src="../resources/images/msu_banner2.png" class="image-responsive header-image"/>
-            <h1 class="text-center text-primary header-text">Welcome to the results portal!</h1>
+            }
+            ?>
+            <h1 class="text-center text-primary header-text">Welcome <?php echo $first_name . ' ' . $last_name; ?>!</h1>
         </div>
         <div class="navbar navbar-inverse navbar-static-top" data-spy="affix" data-offset-top="197" style="width: 100%; margin-top: -3.2px; padding: 0;">
             <div class="container">
@@ -88,23 +82,13 @@ if (isset($_SESSION['message'])) {
                 </button>
                 <div class="collapse navbar-collapse navHeaderCollapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="index.html"><img src="resources/images/home.ico" alt="Home" class="image-responsive icon"/><b>Home</b></a></li>
-                        <li class="dropdown">
-                            <a href="#" data-toggle="dropdown" class="dropdown-toggle"><img src="resources/images/login.png" alt="Login" class="image-responsive icon"/> <b class="caret">Login</b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="admin/index.php"> <img src="resources/images/admin.png" alt="Admin Login" class="image-responsive icon"/><i>Admin Login</i></a></li>
-                                <li class="divider"></li>
-                                <li><a href="student/index.php"> <img src="resources/images/student-xxl.png" alt="Student Login" class="image-responsive icon"/><i>Student Login</i></a></li>
-                            </ul>
-                        </li>
-                        <li> <a href="logout.php"><button class="button button-block" name="logout"/>Log Out</button></a></li>
+                        <li class="active"><a href="index.html"><img src="../resources/images/home.ico" alt="Home" class="image-responsive icon"/><b>Home</b></a></li>
+                        <li><a href="Add_register.php"> <img src="../resources/images/registericon.png" alt="Student Login" class="image-responsive icon"/><b>Register a Student</b></a></li>
+                        <li> <a href="../Controller/logout.php"><button class="button button-block" name="logout"/>Log Out</button></a></li>
                     </ul>
                 </div>
             </div>
-
-
         </div>
-
         <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
         <script src="js/index.js"></script>
 
