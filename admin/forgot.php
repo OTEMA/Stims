@@ -1,26 +1,26 @@
 <?php 
 /* Reset your password form, sends reset.php password link */
-require 'db.php';
+require '../Controller/db.php';
 session_start();
 
 // Check if form submitted with method="post"
 if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) 
 {   
     $email = $mysqli->escape_string($_POST['email']);
-    $result = $mysqli->query("SELECT * FROM users WHERE email='$email'");
+    $result = $mysqli->query("SELECT * FROM admins WHERE Email='$email'");
 
     if ( $result->num_rows == 0 ) // User doesn't exist
     { 
         $_SESSION['message'] = "User with that email doesn't exist!";
-        header("location: error.php");
+        header("location: ../Controller/error.php");
     }
     else { // User exists (num_rows != 0)
 
         $user = $result->fetch_assoc(); // $user becomes array with user data
         
-        $email = $user['email'];
+        $email = $user['Email'];
         $hash = $user['hash'];
-        $first_name = $user['first_name'];
+        $first_name = $user['Fname'];
 
         // Session message to display on success.php
         $_SESSION['message'] = "<p>Please check your email <span>$email</span>"
@@ -40,7 +40,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
 
         mail($to, $subject, $message_body);
 
-        header("location: success.php");
+        header("location: ../Controller/success.php");
   }
 }
 ?>
@@ -48,7 +48,15 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
 <html>
 <head>
   <title>Reset Your Password</title>
-  <?php include 'css/css.html'; ?>
+  <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="../resources/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+<link href="../resources/css/Appearance.css" rel="stylesheet" type="text/css"/>
+<link href="../resources/css/font-awesome.css" rel="stylesheet" type="text/css"/>
+<!--  JavaScript files-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -62,14 +70,14 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
       <label>
         Email Address<span class="req">*</span>
       </label>
-      <input type="email"required autocomplete="off" name="email"/>
+      <input type="email"required autocomplete="on" name="email"/>
     </div>
     <button class="button button-block"/>Reset</button>
     </form>
   </div>
           
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src="js/index.js"></script>
+<script src="../Controller/js/index.js"></script>
 </body>
 
 </html>

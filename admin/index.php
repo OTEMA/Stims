@@ -59,14 +59,15 @@ session_start();
 
                         <div class="field-wrap">
                             <label>
-                                Email Address<span class="req">*</span>
+                                Staff Number<span class="req">*</span>
                             </label>
-                            <input type="email" required autocomplete="on" name="email" style="color: #FFFFFF;" />
+                            <input type="text" required autocomplete="on" name="Staffno" style="color: #FFFFFF;" />
                         </div>
 
                         <div class="field-wrap">
                             <label>
-                                Password<span class="req">*</span>
+                                Password
+                                <span class="req">*</span>
                             </label>
                             <input type="password" required autocomplete="off" name="password" style="color: #FFFFFF;" />
                         </div>
