@@ -30,6 +30,7 @@ session_start();
     ?>
     </p>
         <a href="../index.php"><button class="button button-block"/>Home</button></a>
+              <a href="../admin/reset.php">Reset Now</a>
 </div>
 </body>
 </html>
