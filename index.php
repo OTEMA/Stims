@@ -44,14 +44,14 @@
         </div>
         <div id="body">
             <div class="rows">
-                <div class="col-sm-6 col-md-4">
+                <div class="col-sm-6 col-md-6 well-sm well-lg">
                     <p><b>Welcome to the student Information management system</b></p>
                     <p>This system allows you to view your results and other informations.
                         <br> The administrator can also upload and manage student details easily.</p>
                     <p><b class="bg-note">New users:</b> Please check your email for your log-in information.</p>
                     <p><b class="bg-note">Existing users:</b> Proceed to your relevant login pages <a href="admin/index.php">Admin Login page </a> | <a href="student/index.php">Student Login Page</a> enter your username and password and click the Investigator log in button.</p>
                 </div>
-                <div class="col-sm-6 col-md-8 well">
+                <div class="col-sm-6 col-md-6">
                 </div>
             </div>
         </div >

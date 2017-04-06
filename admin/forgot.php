@@ -28,7 +28,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
 
         // Send registration confirmation link (reset.php)
         $to      = $email;
-        $subject = 'Password Reset Link ( clevertechie.com )';
+        $subject = 'Password Reset Link ( otelmaltd@gmail.com )';
         $message_body = '
         Hello '.$first_name.',
 
@@ -48,6 +48,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
 <html>
 <head>
   <title>Reset Your Password</title>
+  <link rel="shortcut icon" href="../resources/images/student-portal_icon.png"  type="image/x-icon"/>
   <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">

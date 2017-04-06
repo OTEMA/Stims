@@ -67,6 +67,7 @@ if ($_SESSION['logged_in'] != 1) {
                 '<div class="info">
               Account is unverified, please confirm your email by clicking
               on the email link!
+              <a href="verify.php">Verify now</>
               </div>';
             }
             ?>
