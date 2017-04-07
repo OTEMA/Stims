@@ -33,11 +33,9 @@ else{
 if ( $mysqli->query($sql) ){
 
         $_SESSION['active'] = 0; //0 until user activates their account with verify.php
-        $_SESSION['logged_in'] = true; // So we know the user has logged in
         $_SESSION['message'] =
                 
-                 "Confirmation link has been sent to $email, please verify
-                 your account by clicking on the link in the message!";
+                 "User Added successully!";
 
         // Send registration confirmation link (verify.php)
         $to      = $email;
