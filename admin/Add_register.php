@@ -1,3 +1,22 @@
+<?php
+require '../Controller/db.php';
+session_start();
+
+
+if ($_SESSION['logged_in'] != 1) {
+    $_SESSION['message'] = "You must log in before viewing your profile page!";
+    header("location: ../Controller/error.php");
+} else {
+
+    $first_name = $_SESSION['first_name'];
+    $last_name = $_SESSION['last_name'];
+    $email = $_SESSION['email'];
+    $active = $_SESSION['active'];
+}
+$result = $mysqli->query("SELECT * FROM schools") or die($mysqli->error);
+$result1 = $mysqli->query("SELECT * FROM departments") or die($mysqli->error);
+$result2 = $mysqli->query("SELECT * FROM programs") or die($mysqli->error);
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -47,15 +66,13 @@
     <body>
         <div id="container">
             <img src="../resources/images/msu_banner2.png" class="image-responsive header-image"/>
-            <h1 class="text-center text-primary header-text">Welcome to the Student portal!</h1>
+            <h1 class="text-center text-primary header-text" style="margin-top:-50px;">You are Logged in as <?php echo $first_name . ' ' . $last_name; ?>!</h1><a href="../Controller/logout.php" style="float:right; width: 100px;"><button class="button button-block" name="logout"/>Log Out</button></a>
         </div>
         <div class="rows">
             <div class="col-sm-6 col-md-3">
-                <p class="notice"><b class=" text-capitalize text-primary bg-note">For first time login </b>
-                    Please use your admission Number as username and National Identity card number as password</p>
             </div>
             <div class="col-sm-6 col-md-7 ">
-                <form action="../Controller/Registration_controller.php" method="POST" class="login">
+                <form action="Register_student.php" method="POST" class="login">
                     <div class="form-group">
                         <label for="Fname">First Name</label>
                         <input type="text" class="form-control" id="Fname" name="Fname" autocomplete="on" placeholder="Enter your First name" required="required">
@@ -86,15 +103,36 @@
                     </div>
                     <div class="form-group">
                         <label for="SC">School</label>
-                        <input type="text" class="form-control" id="SC" name="SC" autocomplete="on" placeholder="Enter The name of school" required="required">
+                        <select name="SC" class="form-control">
+                            <option value="Select School">Select Shool</option>
+                            <?php
+                            while ($row = mysqli_fetch_array($result)) {
+                                echo "<option value='" . $row['path'] . "'>'" . $row['name'] . "'</option>";
+                            }
+                            ?>        
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="Dept">Department</label>
-                        <input type="text" class="form-control" id="Dept" name="Dept" autocomplete="on" placeholder="Enter The name of Department" required="required">
+                        <select name="dept" class="form-control">
+                            <option value="Select School Name">Select Department</option>
+                            <?php
+                            while ($row = mysqli_fetch_array($result1)) {
+                                echo "<option value='" . $row['path'] . "'>'" . $row['name'] . "'</option>";
+                            }
+                            ?>        
+                        </select>
                     </div>
                     <div class="form-group">
-                        <label for="Course">Course</label>
-                        <input type="text" class="form-control" id="Course" name="Course" autocomplete="on" placeholder="Enter The name of course" required="required">
+                        <label for="program">Program</label>
+                        <select name="program" class="form-control">
+                            <option value="Select Program">Select Program</option>
+                            <?php
+                            while ($row = mysqli_fetch_array($result2)) {
+                                echo "<option value='" . $row['path'] . "'>'" . $row['name'] . "'</option>";
+                            }
+                            ?>        
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="Tel">Telephone</label>
