@@ -103,7 +103,7 @@ $result2 = $mysqli->query("SELECT * FROM programs") or die($mysqli->error);
                     </div>
                     <div class="form-group">
                         <label for="SC">School</label>
-                        <select name="SC" class="form-control">
+                        <select name="SC" id="SC" class="form-control">
                             <option value="Select School">Select Shool</option>
                             <?php
                             while ($row = mysqli_fetch_array($result)) {
@@ -114,7 +114,7 @@ $result2 = $mysqli->query("SELECT * FROM programs") or die($mysqli->error);
                     </div>
                     <div class="form-group">
                         <label for="Dept">Department</label>
-                        <select name="dept" class="form-control">
+                        <select name="Dept" id="Dept" class="form-control">
                             <option value="Select School Name">Select Department</option>
                             <?php
                             while ($row = mysqli_fetch_array($result1)) {
@@ -125,7 +125,7 @@ $result2 = $mysqli->query("SELECT * FROM programs") or die($mysqli->error);
                     </div>
                     <div class="form-group">
                         <label for="program">Program</label>
-                        <select name="program" class="form-control">
+                        <select name="program" id="program" class="form-control">
                             <option value="Select Program">Select Program</option>
                             <?php
                             while ($row = mysqli_fetch_array($result2)) {
