@@ -16,11 +16,10 @@
     <body>
         <div id="container">
             <img src="resources/images/msu_banner2.png" class="image-responsive header-image"/>
-            <h1 class="text-center text-primary header-text">Welcome to the results portal!</h1>
-        </div>
+                    </div>
         <div class="navbar navbar-default navbar-static-top" data-spy="affix" data-offset-top="197" style="width: 100%; margin-top: -3.2px; padding: 0;">
             <div class="container">
-                <a href="http://www.maseno.ac.ke" class="navbar-brand">Online Results </a>
+                <a href="http://www.maseno.ac.ke" class="navbar-brand">STUDENT INFORMATION MANAGEMENT SYSTEM </a>
                 <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
