@@ -1,7 +1,7 @@
 <?php
 require '../Controller/db.php';
 
-// Protection against SQL injections
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 $Fname = $mysqli->escape_string($_POST['Fname']);
 $Mname = $mysqli->escape_string($_POST['Mname']);
 $Lname = $mysqli->escape_string($_POST['Lname']);
@@ -28,22 +28,20 @@ if ( $result->num_rows > 0 ) {
     
 }
 else{
-    $sql = "INSERT INTO admins (Fname, Mname, Lname, AdmNo, DOB, DOA, IdNo, Schoo, Dept, Prog_name, Tel, Email, Password, Hash) VALUES ('$Fname','$Mname','$Lname','$AdmNo','$date','$date1','$IdNo','$SC','$Dept','$program', '$Tel', '$email','$password', '$hash')";
-}
+    $sql = "INSERT INTO students (Fname, Mname, Lname, AdmNo, DOB, DOA, IdNo, Schoo, Dept, Prog_name, Tel, Email, Password, Hash) VALUES ('$Fname','$Mname','$Lname','$AdmNo','$date','$date1','$IdNo','$SC','$Dept','$program', '$Tel', '$email','$password', '$hash')";
+
 if ( $mysqli->query($sql) ){
 
         $_SESSION['active'] = 0; //0 until user activates their account with verify.php
-        $_SESSION['message'] =
-                
-                 "User Added successully!";
+        $_SESSION['message'] = "User Added successully!";
 
         // Send registration confirmation link (verify.php)
         $to      = $email;
         $subject = 'Account Verification ( otelmaltd@gmail.com )';
         $message_body = '
-        Hello '.$first_name.',
+        Hello '.$Fname.',
 
-        Thank you for signing up!
+        You have been registered for '.$program.',
 
         Please click this link to activate your account:
 
@@ -60,3 +58,5 @@ if ( $mysqli->query($sql) ){
         header("location: ../Controller/error.php");
     }
 
+}
+}
