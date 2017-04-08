@@ -28,7 +28,7 @@
                 </button>
                 <div class="collapse navbar-collapse navHeaderCollapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="index.html"><img src="resources/images/home.ico" alt="Home" class="image-responsive icon"/><b>Home</b></a></li>
+                        <li class="active"><a href="index.html"><img src="resources/images/Home.ico" alt="Home" class="image-responsive icon"/><b>Home</b></a></li>
                         <li class="dropdown">
                             <a href="#" data-toggle="dropdown" class="dropdown-toggle"><img src="resources/images/login.png" alt="Login" class="image-responsive icon"/> <b class="caret">Login</b></a>
                             <ul class="dropdown-menu">
