@@ -15,20 +15,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $Email = $mysqli->escape_string($_POST['email']);
         $hash = $mysqli->escape_string($_POST['hash']);
         
-        $sql = "UPDATE users SET password='$new_password', hash='$hash' WHERE email='$Email'";
+        $sql = "UPDATE admins SET password='$new_password', hash='$hash' WHERE email='$Email'";
 
         if ( $mysqli->query($sql) ) {
 
         $_SESSION['message'] = "Your password has been reset successfully!";
-        header("location: success.php");    
+        header("location: ../Controller/success.php");    
 
         }
 
     }
     else {
         $_SESSION['message'] = "Two passwords you entered don't match, try again!";
-        header("location: error.php");    
+        header("location: ../Controller/error.php");    
     }
 
 }
-?>
