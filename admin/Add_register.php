@@ -143,7 +143,7 @@ $result2 = $mysqli->query("SELECT * FROM programs") or die($mysqli->error);
                         <input type="Email" class="form-control" id="Email" name="Email" autocomplete="on" placeholder="Enter Email" required="required">
                     </div>
                     <div class="form-group">
-                        <input type="submit" class="form-control btn-primary login" value="Register">
+                        <input type="submit" class="form-control btn-primary" value="Register">
                     </div>
                 </form>
                 <div class="slideleft">
