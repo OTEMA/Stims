@@ -1,0 +1,216 @@
+.affix {
+    top: 0;
+    width: 100%;
+}
+
+.affix {
+    padding-top: 70px;
+}
+.header-image{
+    width: 103%;
+    margin-left:-25px;
+}
+.header-text{
+    
+}
+.brand-img{
+    height: 50px;
+    width:80px;
+    margin-top:-10px;
+}
+.bg-note{
+    background-color: #ff6633;
+}
+.img-header{
+    width: 100px;
+    height: 100px;
+    margin-top: 50px;
+    margin-bottom: -25px;
+}
+.wel{
+    border: 1px solid cadetblue;
+}
+h1.heading1{
+    border: 10px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url(../images/bottom-border.png) 30 stretch; /* Safari 3.1-5 */
+    -o-border-image: url(../images/bottom-border.png) 30 stretch; /* Opera 11-12.1 */
+    border-image: url(../images/bottom-border.png) 30 stretch;
+    color:#006666;
+    font-family: 'Merriweather', serif;
+}
+.icon{
+    height: 50px;
+    width: 50px;
+}
+html, body{
+    font-size: 100%;
+    font-family: 'Open Sans', sans-serif;
+    background:#ffffff;
+    margin: 0;
+}
+p,ul li,ol li{
+    margin:0;
+    font-size:14px;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Cabin', sans-serif;
+    margin:0;
+}
+ul,label{
+    margin:0;
+    padding:0;
+}
+body a:hover{
+    text-decoration:none;
+}
+input[type="submit"],input[type="reset"],a,.w3l_banner_bottom_grid1 i,.w3layouts_more a i{
+    -webkit-transition: 0.5s ease-in;
+    -moz-transition: 0.5s ease-in;
+    -ms-transition: 0.5s ease-in;
+    -o-transition: 0.5s ease-in;
+    transition:0.5s ease-in;
+}
+a:focus{
+    outline:none;
+}
+/*-- nav --*/
+.navbar-default {
+    background: none;
+    border: none;
+}
+.navbar {
+    margin-bottom: 0;
+}
+.navbar-collapse {
+    padding: 0;
+}
+.navbar-right {
+    margin-right: 0;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color:#ff6633;
+    background:none;
+}
+.navbar-default .navbar-nav > .active > a:before{
+    background: #000033;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
+    -ms-transform: translateX(0);
+}
+.navbar-default .navbar-nav > li > a {
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.navbar-nav > li > a {
+    margin: 0 2em;
+    padding: 0 0 0.5em;
+    text-transform: uppercase;
+}
+.navbar-default .navbar-nav > li > a:hover{
+    color:#000033;
+}
+.navbar-default .navbar-nav > li > a:focus {
+    color: #ff6633;
+    outline:none;
+}
+nav.navbar.navbar-default {
+    background: none;
+    padding:2em 0 0;
+}
+.navbar-right {
+    margin:1.5em 0 0;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    color:#ff6633;
+    background: none;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+}
+.navbar-default .navbar-nav  > .active.open > a:focus {
+    background:transparent;
+    color: #000033;
+}
+.navbar-default .navbar-brand,.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    color: #000033;
+}
+.navbar-brand {
+    height: 70px;
+    padding: 0;
+    font-size: .8em;
+    line-height: 50px;
+    letter-spacing: 2px;
+    background: url(images/student-xxl.png) no-repeat 0px 0px;
+    text-transform: uppercase;
+}
+.navbar-brand span{
+    color: #000033;
+    font-size: 1.5em;
+    display: inline-block;
+    padding: 0 .7em 0 .7em;
+    vertical-align: middle;
+}
+.navbar-brand i{
+    display:inline-block;
+    vertical-align:middle;
+    font-style:normal;
+}
+.login{
+    margin-top: 50px;
+    padding: 25px;
+    border-radius: 1%;
+    border: 5px solid #000033; 
+}
+.btn-primary{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+div.slideleft {
+    display: block;
+    white-space: nowrap;
+    clear: both;
+    overflow:hidden;
+    float: bottom;
+    background-color: #000033;
+    margin-top: -5px;
+    border-radius: 1%;
+    color: #FFFFFF;
+}
+div.slideleft p {
+    display: inline-block;
+    padding-left: 100%;
+    animation: slideleft 5s infinite linear;
+}
+@keyframes slideleft { //works on all browsers
+                       0%{
+                           -webkit-transform: translate(0, 0);
+                       }
+                       100%{
+                           -webkit-transform: translate(-100%, 0);
+                       }
+}
+.copyright-image{
+    width: 25px;
+    height: 25px;
+}
+.notice{
+    margin-top: 100px;
+}
+.fpwd{
+    width: 100px;
+    height: 100px;
+}
+.loginbtn{
+    background-image: url("../resources/images/Login.jpg");
+}
+.reset{
+margin-top: 100px;
+margin-top: 50px;
+    padding: 25px;
+    border-radius: 1%;
+    border: 5px solid #000033; 
+}
