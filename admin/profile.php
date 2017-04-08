@@ -75,7 +75,7 @@ if ($_SESSION['logged_in'] != 1) {
         </div>
         <div class="navbar navbar-inverse navbar-static-top" data-spy="affix" data-offset-top="197" style="width: 100%; margin-top: -3.2px; padding: 0;">
             <div class="container">
-                <a href="http://www.maseno.ac.ke" class="navbar-brand">Online Results </a>
+                <a href="../index.php" class="navbar-brand">STUDENT INFORMATION MANAGEMENT SYSTEM </a>
                 <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
