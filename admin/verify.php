@@ -2,7 +2,7 @@
 /* Verifies registered user email, the link to this page
    is included in the register.php email message 
 */
-require 'db.php';
+require '../Controller/db.php';
 session_start();
 
 // Make sure email and hash variables aren't empty
@@ -27,11 +27,11 @@ if(isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['hash']) && !
         $mysqli->query("UPDATE users SET active='1' WHERE email='$Email'") or die($mysqli->error);
         $_SESSION['active'] = 1;
         
-        header("location: success.php");
+        header("location: ../Controller/success.php");
     }
 }
 else {
     $_SESSION['message'] = "Invalid parameters provided for account verification!";
-    header("location: error.php");
+    header("location: ../Controller/error.php");
 }     
 ?>
