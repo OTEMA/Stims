@@ -14,8 +14,8 @@ if ($_SESSION['logged_in'] != 1) {
     $active = $_SESSION['active'];
 }
 $result = $mysqli->query("SELECT * FROM schools") or die($mysqli->error);
-$result1 = $mysqli->query("SELECT * FROM departments") or die($mysqli->error);
-$result2 = $mysqli->query("SELECT * FROM programs") or die($mysqli->error);
+$result1 = $mysqli->query("SELECT * FROM department") or die($mysqli->error);
+$result2 = $mysqli->query("SELECT * FROM program") or die($mysqli->error);
 ?>
 <!DOCTYPE html>
 <html>
@@ -115,7 +115,7 @@ $result2 = $mysqli->query("SELECT * FROM programs") or die($mysqli->error);
                     <div class="form-group">
                         <label for="Dept">Department</label>
                         <select name="Dept" id="Dept" class="form-control">
-                            <option value="Select School Name">Select Department</option>
+                            <option value="Select Department Name">Select Department</option>
                             <?php
                             while ($row = mysqli_fetch_array($result1)) {
                                 echo "<option value='" . $row['Dept_Name'] . "'>" . $row['Dept_Name'] . "</option>";
