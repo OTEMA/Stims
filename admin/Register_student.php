@@ -28,7 +28,7 @@ if ( $result->num_rows > 0 ) {
     
 }
 else{
-    $sql = "INSERT INTO students (Fname, Mname, Lname, AdmNo, DOB, DOA, IdNo, Schoo, Dept, Prog_name, Tel, Email, Password, Hash) VALUES ('$Fname','$Mname','$Lname','$AdmNo','$date','$date1','$IdNo','$SC','$Dept','$program', '$Tel', '$email','$password', '$hash')";
+    $sql = "INSERT INTO students (Fname, Mname, Lname, AdmNo, DOB, DOA, IdNo, School, Dept, Prog_name, Tel, Email, Password, Hash) VALUES ('$Fname','$Mname','$Lname','$AdmNo','$date','$date1','$IdNo','$SC','$Dept','$program', '$Tel', '$email','$password', '$hash')";
 
 if ( $mysqli->query($sql) ){
 
