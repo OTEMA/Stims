@@ -129,7 +129,7 @@ $result2 = $mysqli->query("SELECT * FROM programs") or die($mysqli->error);
                             <option value="Select Program">Select Program</option>
                             <?php
                             while ($row = mysqli_fetch_array($result2)) {
-                                echo "<option value='" . $row['Prog_name'] . "'>" . $row['Prog_name'] . "</option>";
+                                echo "<option value='" . $row['Prog_Id'] . "'>" . $row['Prog_name'] . "</option>";
                             }
                             ?>        
                         </select>
