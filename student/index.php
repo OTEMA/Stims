@@ -6,7 +6,7 @@ session_start();
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Sign-Up/Login Form</title>
+        <title>Login Form</title>
         <link href="../resources/css/Appearance.css" rel="stylesheet" type="text/css"/>
         <link href="../resources/css/bootstrap.css" rel="stylesheet" type="text/css"/>
         <link href="../resources/css/font-awesome.css" rel="stylesheet" type="text/css"/>
@@ -35,7 +35,7 @@ session_start();
     </head>
     <?php
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        if (isset($_POST['login'])) { //user logging in
+        if (isset($_POST['login'])) { //user login
             require 'login.php';
         } elseif (isset($_POST['register'])) { //user registering
             require 'register.php';

@@ -2,7 +2,7 @@
 /* The password reset form, the link to this page is included
    from the forgot.php email message
 */
-require 'db.php';
+require '../Controller/db.php';
 session_start();
 
 // Make sure email and hash variables aren't empty
@@ -73,7 +73,7 @@ else {
 
     </div>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src="js/index.js"></script>
+<script src="../resources/js/index.js"></script>
 
 </body>
 </html>
