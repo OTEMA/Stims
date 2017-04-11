@@ -29,7 +29,7 @@ session_start();
                 a.src = g;
                 m.parentNode.insertBefore(a, m);
             })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-            ga('create', 'UA-40923671-1', 'lakehub.co.ke');
+            ga('create', 'UA-40923671-1', 'websiteurl');
             ga('send', 'pageview');
         </script>
     </head>
