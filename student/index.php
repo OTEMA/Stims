@@ -33,30 +33,22 @@ session_start();
             ga('send', 'pageview');
         </script>
     </head>
-    <?php
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        if (isset($_POST['login'])) { //user login
-            require 'login.php';
-        } elseif (isset($_POST['register'])) { //user registering
-            require 'register.php';
-        }
-    }
-    ?>
-    <body>
+        <body>
         <div class="form">
-            <h1>Welcome Back!</h1>
-            <form action="index.php" method="post" autocomplete="off">
+            <h1 style="color: #ffffff; font-family: vietnamese Serif;">Welcome Back!</h1>
+            <h2 class="text-danger" style="font-family: vietnamese Serif; font-size: 14px;"><b style="font-size: 16px;">For first time Login</b>, use your National identity number as password but <b style="font-size: 16px;"> incase you have no Id yet</b>, use your admission number</h2>>
+            <form action="login.php" method="post" autocomplete="off">
                 <div class="field-wrap">
                     <label>
-                        Email Address<span class="req">*</span>
+                        Admission Number<span class="req">*</span>
                     </label>
-                    <input type="email" required autocomplete="off" name="email"/>
+                    <input type="email" required autocomplete="on" name="email" style="color: #ffffff;"/>
                 </div>
                 <div class="field-wrap">
                     <label>
                         Password<span class="req">*</span>
                     </label>
-                    <input type="password" required autocomplete="off" name="password"/>
+                    <input type="password" required autocomplete="off" name="password" style="color: #ffffff;"/>
                 </div>
                 <p class="forgot"><a href="forgot.php">Forgot Password?</a></p>
                 <button class="button button-block" name="login" />Log In</button>
@@ -68,5 +60,6 @@ session_start();
             </div> 
         <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
         <script src="../resources/js/Copyright.js" type="text/javascript"></script>
+        <script src="../resources/js/index.js" type="text/javascript"></script>
     </body>
 </html>
