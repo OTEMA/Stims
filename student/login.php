@@ -3,11 +3,11 @@
 
 // Escape email to protect against SQL injections
 $email = $mysqli->escape_string($_POST['email']);
-$result = $mysqli->query("SELECT * FROM students WHERE Adm='$email'");
+$result = $mysqli->query("SELECT * FROM students WHERE AdmNo='$AdmNo'");
 
 if ( $result->num_rows == 0 ){ // User doesn't exist
-    $_SESSION['message'] = "User with that email doesn't exist!";
-    header("location: error.php");
+    $_SESSION['message'] = "User doesn't exist!";
+    header("location: ../Controller/error.php");
 }
 else { // User exists
     $user = $result->fetch_assoc();
@@ -24,6 +24,7 @@ else { // User exists
 
         header("location: profile.php");
     }
+    //Show a message inaces of an error
     else {
         $_SESSION['message'] = "You have entered wrong password, try again!";
         header("location: error.php");
