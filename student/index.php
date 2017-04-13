@@ -42,7 +42,7 @@ session_start();
                     <label>
                         Admission Number<span class="req">*</span>
                     </label>
-                    <input type="email" required autocomplete="on" name="email" style="color: #ffffff;"/>
+                    <input type="text" required autocomplete="on" name="AdmNo" style="color: #ffffff;"/>
                 </div>
                 <div class="field-wrap">
                     <label>
