@@ -14,7 +14,7 @@ else { // User exists
 
     if ( password_verify($_POST['password'], $user['Password']) ) {
         
-        $_SESSION['email'] = $user['email'];
+        $_SESSION['email'] = $user['Email'];
         $_SESSION['first_name'] = $user['Fname'];
         $_SESSION['last_name'] = $user['Lname'];
         $_SESSION['active'] = $user['active'];
