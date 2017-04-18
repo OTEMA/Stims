@@ -1,13 +1,12 @@
 <?php
-
 session_start();
 
-if ( $_SESSION['logged_in'] != 1 ) {
-  $_SESSION['message'] = "You must log in before viewing your profile page!";
-  header("location: ../Controller/error.php");    
-}
-else {
-    
+
+if ($_SESSION['logged_in'] != 1) {
+    $_SESSION['message'] = "You must log in before viewing your profile page!";
+    header("location: ../Controller/error.php");
+} else {
+
     $first_name = $_SESSION['first_name'];
     $last_name = $_SESSION['last_name'];
     $email = $_SESSION['email'];
@@ -16,10 +15,10 @@ else {
 ?>
 <!DOCTYPE html>
 <html >
-<head>
-  <meta charset="UTF-8">
-  <title>Welcome <?= $first_name.' '.$last_name ?></title>
-       <link rel="shortcut icon" href="../resources/images/student-portal_icon.png"  type="image/x-icon"/>
+    <head>
+        <meta charset="UTF-8">
+        <title>Welcome <?= $first_name . ' ' . $last_name ?></title>
+        <link rel="shortcut icon" href="../resources/images/student-portal_icon.png"  type="image/x-icon"/>
         <link href="../resources/css/Appearance.css" rel="stylesheet" type="text/css"/>
         <link href="../resources/css/bootstrap.css" rel="stylesheet" type="text/css"/>
         <link href="../resources/css/font-awesome.css" rel="stylesheet" type="text/css"/>
@@ -46,50 +45,144 @@ else {
             ga('create', 'UA-40923671-1', 'websiteurl');
             ga('send', 'pageview');
         </script>
-</head>
+    </head>
+    <body>
+        <div class="container-fluid header">
+            <p>
+                <?php
+// Display message about account verification link only once
+                if (isset($_SESSION['message'])) {
+                    echo $_SESSION['message'];
 
-<body>
-  <div class="form">
+                    // Don't annoy the user with more messages upon page refresh
+                    unset($_SESSION['message']);
+                }
+                ?>
+            </p>
 
-          <h1>Welcome</h1>
-          
-          <p>
-          <?php 
-     
-          // Display message about account verification link only once
-          if ( isset($_SESSION['message']) )
-          {
-              echo $_SESSION['message'];
-              
-              // Don't annoy the user with more messages upon page refresh
-              unset( $_SESSION['message'] );
-          }
-          
-          ?>
-          </p>
-          
-          <?php
-          
-          // Keep reminding the user this account is not active, until they activate
-          if ( !$active ){
-              echo
-              '<div class="info">
+            <?php
+            // Keep reminding the user this account is not active, until they activate
+            if (!$active) {
+                echo
+                '<div class="info">
               Account is unverified, please confirm your email by clicking
               on the email link!
+              <a href="verify.php">Verify now</>
               </div>';
-          }
-          
-          ?>
-          
-          <h2><?php echo $first_name.' '.$last_name; ?></h2>
-          <p><?= $email ?></p>
-          
-          <a href="../Controller/logout.php"><button class="button button-block" name="logout"/>Log Out</button></a>
+            }
+            ?>
+            <h1 class="text-center text-primary header-text">Welcome <?php echo $first_name . ' ' . $last_name; ?>!</h1>
+        </div>
+        <div class="navbar navbar-inverse navbar-static-top" data-spy="affix" data-offset-top="197" style="width: 100%; margin-top: -3.2px; padding: 0;">
+            <div class="container">
+                <a href="../index.php" class="navbar-brand">STUDENT INFORMATION MANAGEMENT SYSTEM </a>
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="collapse navbar-collapse navHeaderCollapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="#"><img src="../resources/images/home.ico" alt="Home" class="image-responsive icon"/><b>Home</b></a></li>
+                        <li><a href="Add_register.php"> <img src="../resources/images/registericon.png" alt="Student Login" class="image-responsive icon"/><b>Register a Student</b></a></li>
+                        <li> <a href="../Controller/logout.php"><button class="button button-block" name="logout"/>Log Out</button></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="form">
+         <div class="tab-content">
+                <div id="login">   
+                    <h1 style="color: #FFFFFF;">Welcome Back!</h1>
+                    <form action="ProphileController.php" method="post">
+                        <div class="field-wrap">
+                            <label>
+                                Staff Number<span class="req">*</span>
+                            </label>
+                            <input type="text" required autocomplete="on" name="Staffno" style="color: #FFFFFF;" />
+                        </div>
+                        <div class="field-wrap">
+                            <label>
+                                Password
+                                <span class="req">*</span>
+                            </label>
+                            <input type="password" required autocomplete="off" name="password" style="color: #FFFFFF;" />
+                        </div>
+                        <button class="button button-block" name="login" />Log In</button>
+                    </form>
+                </div>
+                <div id="signup">   
+                    <h1 style="color: #FFFFFF;">Sign Up Here</h1>
+                    <form action="index.php" method="post">
+                        <div class="top-row">
+                            <div class="form-group field-wrap">
+                                <label>
+                                    First Name<span class="req">*</span>
+                                </label>
+                                <input type="text" required autocomplete="on" name='firstname' style="color: #FFFFFF;" />
+                            </div>
+                            <div class="form-group field-wrap">
+                                <label>
+                                    Middle Name<span class="req">*</span>
+                                </label>
+                                <input type="text" required autocomplete="on" name='Mname' style="color: #FFFFFF;" />
+                            </div>                                                    
+                        </div>
+                        <div class="form-group field-wrap">
+                            <label>
+                                Last Name<span class="req">*</span>
+                            </label>
+                            <input type="text"required autocomplete="on" name='lastname' style="color: #FFFFFF;" />
+                        </div>
+                        <div class="middle-row">
+                            <div class="form-group field-wrap">
+                                <label>
+                                    Staff ID<span class="req">*</span>
+                                </label>
+                                <input type="text" required autocomplete="on" name='Staffno' style="color: #FFFFFF;" />
+                            </div>
+                            <div class="form-group field-wrap">
+                                <label>
+                                    National ID<span class="req">*</span>
+                                </label>
+                                <input type="text" required autocomplete="on" name='IdNo' style="color: #FFFFFF;" />
+                            </div>
+                        </div>
+                        <div class="center-row">
+                            <div class="form-group field-wrap">
+                                <label>
+                                    Telephone Number<span class="req">*</span>
+                                </label>
+                                <input type="text" required autocomplete="on" name='Tel' style="color: #FFFFFF;"/>
+                            </div>
+                            <div class="form-group field-wrap">
+                                <label>
+                                    Email Address<span class="req">*</span>
+                                </label>
+                                <input type="email"required autocomplete="on" name='email' style="color: #FFFFFF;" />
+                            </div>
+                        </div>
+                        <div class="bottom-row">
+                            <div class="form-group field-wrap">
+                                <label>
+                                    Set A Password<span class="req">*</span>
+                                </label>
+                                <input type="password"required autocomplete="off" name='password' id="pwd" style="color: #FFFFFF;" />
+                            </div>
+                            <div class="form-group field-wrap">
+                                <label>
+                                    Confirm Password<span class="req">*</span>
+                                </label>
+                                <input type="password" required autocomplete="off" name='PWD' id="cpwd" style="color: #FFFFFF;" onkeypress="passwordChecker()" onkeyup="passwordChecker()" />
+                            </div>
+                        </div>
+                        <button type="submit" class="button button-block" name="register" />Register</button>
+                    </form>
+                </div>  
+            </div><!-- tab-content -->
+        </div> <!-- /form -->
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script src="js/index.js"></script>
 
-    </div>
-    
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src="../resources/js/index.js"></script>
-
-</body>
+    </body>
 </html>
