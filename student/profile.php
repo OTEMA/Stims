@@ -85,10 +85,10 @@ if ($_SESSION['logged_in'] != 1) {
                         <li class="active"><a href="index.html"><img src="../resources/images/Home.ico" alt="Home" class="image-responsive icon"/><b>Home</b></a></li>
                         <li class="dropdown">
                             <a href="#" data-toggle="dropdown" class="dropdown-toggle"><img src="../resources/images/pROPHILE.png" alt="Prophile" class="image-responsive icon"/> <b class="glyphicon glyphicon-wrench"><?php echo $first_name . ' ' ?></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="admin/index.php"> <img src="../resources/images/Setting.png" alt="Admin Login" class="image-responsive icon"/><i>Update Prophile</i></a></li>
+                            <ul class="dropdown-menu tab-group">
+                                <li class="tab"><a href="#signup"> <img src="../resources/images/Setting.png" alt="Admin Login" class="image-responsive icon"/><i>Update Profile</i></a></li>
                                 <li class="divider"></li>
-                                <li><a href="student/index.php"> <img src="../resources/images/student-xxl.png" alt="Student Login" class="image-responsive icon"/><i>Change Password</i></a></li>
+                                <li class="tab"><a href="student/index.php"> <img src="../resources/images/student-xxl.png" alt="Student Login" class="image-responsive icon"/><i>Change Password</i></a></li>
                             
                             </ul>
                         </li>
@@ -121,7 +121,7 @@ if ($_SESSION['logged_in'] != 1) {
                 </div>
                 <div id="signup">   
                     <h1 style="color: #FFFFFF;">Sign Up Here</h1>
-                    <form action="index.php" method="post">
+                    <form action="ProphileController.php" method="post">
                         <div class="top-row">
                             <div class="form-group field-wrap">
                                 <label>
@@ -136,11 +136,17 @@ if ($_SESSION['logged_in'] != 1) {
                                 <input type="text" required autocomplete="on" name='Mname' style="color: #FFFFFF;" />
                             </div>                                                    
                         </div>
+                        <div class="image-row">
                         <div class="form-group field-wrap">
                             <label>
                                 Last Name<span class="req">*</span>
                             </label>
                             <input type="text"required autocomplete="on" name='lastname' style="color: #FFFFFF;" />
+                            </div>
+                             <div class="form-group field-wrap">
+                            
+                            <input type="file" name="image" style="color: #FFFFFF;">
+                        </div>
                         </div>
                         <div class="middle-row">
                             <div class="form-group field-wrap">
@@ -190,7 +196,7 @@ if ($_SESSION['logged_in'] != 1) {
             </div><!-- tab-content -->
         </div> <!-- /form -->
         <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-        <script src="js/index.js"></script>
+        <script src="../resources/js/index.js"></script>
 
     </body>
 </html>

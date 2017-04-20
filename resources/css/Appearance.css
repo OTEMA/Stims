@@ -217,7 +217,21 @@ textarea {
     margin-right: 4%;
     margin-bottom: 15px;
    }
-.bottom-row > div:last-child {
+.image-row > div:last-child {
+    margin: 0;
+}
+.image-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.image-row > div {
+    float: left;
+    width: 48%;
+    margin-right: 4%;
+    margin-bottom: 15px;
+   }
+.image-row > div:last-child {
     margin: 0;
 }
 

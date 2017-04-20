@@ -45,14 +45,11 @@ session_start();
     ?>
     <body>
         <div class="form">
-
             <ul class="tab-group">
                 <li class="tab"><a href="#signup">Sign Up</a></li>
                 <li class="tab active"><a href="#login">Log In</a></li>
             </ul>
-
             <div class="tab-content">
-
                 <div id="login">   
                     <h1 style="color: #FFFFFF;">Welcome Back!</h1>
 
@@ -76,11 +73,8 @@ session_start();
                         <p class="forgot"><a href="forgot.php">Forgot Password?</a></p>
 
                         <button class="button button-block" name="login" />Log In</button>
-
                     </form>
-
                 </div>
-
                 <div id="signup">   
                     <h1 style="color: #FFFFFF;">Sign Up Here</h1>
 
