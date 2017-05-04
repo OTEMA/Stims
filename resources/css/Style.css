@@ -106,7 +106,7 @@ a:focus{
 }
 .navbar-nav > li > a {
     margin: 0 2em;
-    padding: 0 0 0.5em;
+    padding: 0 0 0.2em;
     text-transform: uppercase;
 }
 .navbar-default .navbar-nav > li > a:hover{
@@ -118,7 +118,7 @@ a:focus{
 }
 nav.navbar.navbar-default {
     background: none;
-    padding:2em 0 0;
+    padding:0 0 0;
 }
 .navbar-right {
     margin:1.5em 0 0;
@@ -143,7 +143,9 @@ nav.navbar.navbar-default {
     font-size: .8em;
     line-height: 50px;
     letter-spacing: 2px;
-    background: url(images/student-xxl.png) no-repeat 0px 0px;
+    //background: url(../images/student-xxl.png);
+    //background-repeat: no-repeat;
+    background-size: cover;
     text-transform: uppercase;
 }
 .navbar-brand span{

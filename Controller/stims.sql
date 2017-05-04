@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 10, 2017 at 05:46 PM
+-- Generation Time: May 04, 2017 at 03:22 PM
 -- Server version: 5.7.14
--- PHP Version: 5.6.25
+-- PHP Version: 7.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,33 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `stims`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `admins`
---
-
-CREATE TABLE `admins` (
-  `Fname` varchar(25) NOT NULL,
-  `Mname` varchar(25) NOT NULL,
-  `Lname` varchar(25) NOT NULL,
-  `StaffNo` varchar(16) NOT NULL,
-  `IdNo` int(12) NOT NULL,
-  `Tel` varchar(12) NOT NULL,
-  `Email` varchar(60) NOT NULL,
-  `Password` varchar(60) NOT NULL,
-  `Hash` text NOT NULL,
-  `Time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `active` tinyint(4) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `admins`
---
-
-INSERT INTO `admins` (`Fname`, `Mname`, `Lname`, `StaffNo`, `IdNo`, `Tel`, `Email`, `Password`, `Hash`, `Time`, `active`) VALUES
-('Test', 'Test', 'Test', 'Test', 28789722, 'Test', 'test@test.com', '$2y$10$jO78.tvtxBUhEAskgvD29OoUWl7WexYkiuFcJDiSirDzHqG8cpssu', '07cdfd23373b17c6b337251c22b7ea57', '2017-04-03 10:14:57', 0);
 
 -- --------------------------------------------------------
 
@@ -88,7 +61,7 @@ INSERT INTO `department` (`Department_id`, `Dept_Name`, `School_id`) VALUES
 CREATE TABLE `fees` (
   `Id` int(11) NOT NULL,
   `AdmNo` varchar(30) NOT NULL,
-  `Fee` int(11) NOT NULL,
+  `Fee` int(11) DEFAULT NULL,
   `Amount_Paid` int(11) NOT NULL,
   `Balance` int(11) NOT NULL,
   `Date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
@@ -124,8 +97,8 @@ CREATE TABLE `programs` (
 --
 
 INSERT INTO `programs` (`Prog_name`, `Prog_Id`, `Department_id`) VALUES
-('BscIT', 1, 1),
-('BedSne', 2, 2);
+('BscIT', 5, 1),
+('BedSne', 6, 2);
 
 -- --------------------------------------------------------
 
@@ -171,13 +144,13 @@ CREATE TABLE `students` (
   `Mname` varchar(25) NOT NULL,
   `Lname` varchar(25) NOT NULL,
   `AdmNo` varchar(30) NOT NULL,
-  `DOB` date NOT NULL,
-  `DOA` date NOT NULL,
+  `DOB` varchar(50) NOT NULL,
+  `DOA` varchar(50) NOT NULL,
   `IdNo` varchar(12) NOT NULL,
   `School` varchar(255) NOT NULL,
   `Dept` varchar(255) NOT NULL,
   `Prog_Id` int(11) NOT NULL,
-  `Tel` int(12) NOT NULL,
+  `Tel` varchar(20) NOT NULL,
   `Email` varchar(60) NOT NULL,
   `Password` varchar(60) NOT NULL,
   `Hash` varchar(255) NOT NULL,
@@ -185,15 +158,44 @@ CREATE TABLE `students` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Indexes for dumped tables
+-- Dumping data for table `students`
 --
 
+INSERT INTO `students` (`Fname`, `Mname`, `Lname`, `AdmNo`, `DOB`, `DOA`, `IdNo`, `School`, `Dept`, `Prog_Id`, `Tel`, `Email`, `Password`, `Hash`, `active`) VALUES
+('Test', 'Test', 'Test', 'test', '04/18/2017', '04/18/2017', 'test', 'Computing and Informatics', 'IT', 5, '0702293572', 'o2jose43@gmail.com', '$2y$10$4EhfVfea.2uxx2ZR7wM39.pr00Ew6m7uyMEBKS4OLdgM289k8t5tS', '0336dcbab05b9d5ad24f4333c7658a0e', 0);
+
+-- --------------------------------------------------------
+
 --
--- Indexes for table `admins`
+-- Table structure for table `users`
 --
-ALTER TABLE `admins`
-  ADD PRIMARY KEY (`StaffNo`),
-  ADD UNIQUE KEY `IdNo` (`IdNo`);
+
+CREATE TABLE `users` (
+  `Fname` varchar(25) NOT NULL,
+  `Mname` varchar(25) NOT NULL,
+  `Lname` varchar(25) NOT NULL,
+  `StaffNo` varchar(16) NOT NULL,
+  `IdNo` int(12) NOT NULL,
+  `Tel` varchar(12) NOT NULL,
+  `Email` varchar(60) NOT NULL,
+  `Password` varchar(60) NOT NULL,
+  `Hash` text NOT NULL,
+  `Regisration_Time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `Is_Admin` tinyint(1) NOT NULL DEFAULT '0',
+  `active` tinyint(4) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`Fname`, `Mname`, `Lname`, `StaffNo`, `IdNo`, `Tel`, `Email`, `Password`, `Hash`, `Regisration_Time`, `Is_Admin`, `active`) VALUES
+('Tosby', 'Tosby', 'Tosby', '123456', 123456, '0702293572', 'otienolucie6@gmail.com', '$2y$10$tt.H/SIdIq.2fNLpyOR9E.uxETQsU6wTlcFJtrQ3qNRXQWg0uISMC', '149e9677a5989fd342ae44213df68868', '2017-05-04 12:56:24', 0, 0),
+('Test', 'Test', 'Test', 'Test', 28789722, 'Test', 'test@test.com', '$2y$10$jO78.tvtxBUhEAskgvD29OoUWl7WexYkiuFcJDiSirDzHqG8cpssu', '07cdfd23373b17c6b337251c22b7ea57', '2017-05-04 12:44:49', 1, 0);
+
+--
+-- Indexes for dumped tables
+--
 
 --
 -- Indexes for table `courses`
@@ -256,6 +258,13 @@ ALTER TABLE `students`
   ADD KEY `Prog_Id` (`Prog_Id`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`StaffNo`),
+  ADD UNIQUE KEY `IdNo` (`IdNo`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -268,7 +277,7 @@ ALTER TABLE `department`
 -- AUTO_INCREMENT for table `images`
 --
 ALTER TABLE `images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `programs`
 --
@@ -289,6 +298,12 @@ ALTER TABLE `schools`
 --
 
 --
+-- Constraints for table `courses`
+--
+ALTER TABLE `courses`
+  ADD CONSTRAINT `courses_ibfk_1` FOREIGN KEY (`Prog_Id`) REFERENCES `programs` (`Prog_Id`);
+
+--
 -- Constraints for table `department`
 --
 ALTER TABLE `department`
@@ -299,6 +314,12 @@ ALTER TABLE `department`
 --
 ALTER TABLE `fees`
   ADD CONSTRAINT `fees_ibfk_1` FOREIGN KEY (`AdmNo`) REFERENCES `students` (`AdmNo`);
+
+--
+-- Constraints for table `images`
+--
+ALTER TABLE `images`
+  ADD CONSTRAINT `images_ibfk_1` FOREIGN KEY (`AdmNo`) REFERENCES `students` (`AdmNo`);
 
 --
 -- Constraints for table `programs`
@@ -317,8 +338,7 @@ ALTER TABLE `results`
 -- Constraints for table `students`
 --
 ALTER TABLE `students`
-  ADD CONSTRAINT `students_ibfk_1` FOREIGN KEY (`AdmNo`) REFERENCES `images` (`AdmNo`),
-  ADD CONSTRAINT `students_ibfk_2` FOREIGN KEY (`Prog_Id`) REFERENCES `programs` (`Prog_Id`);
+  ADD CONSTRAINT `students_ibfk_1` FOREIGN KEY (`Prog_Id`) REFERENCES `programs` (`Prog_Id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -234,7 +234,6 @@ textarea {
 .image-row > div:last-child {
     margin: 0;
 }
-
 .button {
     border: 0;
     outline: none;
@@ -253,7 +252,11 @@ textarea {
 .button:hover, .button:focus {
     background: #179b77;
 }
-
+.image-circular{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
 .button-block {
     display: block;
     width: 100%;

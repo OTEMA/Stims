@@ -60,13 +60,12 @@ $result2 = $mysqli->query("SELECT * FROM programs") or die($mysqli->error);
 
             ga('create', 'UA-40923671-1', 'websiteurl');
             ga('send', 'pageview');
-
         </script>
     </head>
     <body>
         <div id="container">
             <img src="../resources/images/msu_banner2.png" class="image-responsive header-image"/>
-            <h1 class="text-center text-primary header-text" style="margin-top:-50px;">You are Logged in as <?php echo $first_name . ' ' . $last_name; ?>!</h1><a href="../Controller/logout.php" style="float:right; width: 100px;"><button class="button button-block" name="logout"/>Log Out</button></a>
+            <h1 class="text-center text-primary header-text" style="margin-top:-50px;">You are Logged in as <?php echo $first_name . ' ' . $last_name; ?>!</h1><a href="../Controller/logout.php" style="float:right;"><button class="button button-block" name="logout"/>Log Out</button></a>
         </div>
         <div class="rows">
             <div class="col-sm-6 col-md-3">
