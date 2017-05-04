@@ -8,7 +8,7 @@ session_destroy();
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Error</title>
+  <title>Logout</title>
   <link href="../resources/css/Appearance.css" rel="stylesheet" type="text/css"/>
   <link href="../resources/css/bootstrap.css" rel="stylesheet" type="text/css"/>
   <link href="../resources/css/font-awesome.css" rel="stylesheet" type="text/css"/>

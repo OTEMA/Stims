@@ -13,6 +13,7 @@ else { // User exists
     $user = $result->fetch_assoc();
 
     if ( password_verify($_POST['password'], $user['Password']) ) {
+        if($user['Is_Admin'] == 1){
         
         $_SESSION['email'] = $user['Email'];
         $_SESSION['first_name'] = $user['Fname'];
@@ -22,11 +23,22 @@ else { // User exists
         // This is how we'll know the user is logged in
         $_SESSION['logged_in'] = true;
 
+        header("location: Admin.php");
+    }
+    else{
+         $_SESSION['email'] = $user['Email'];
+        $_SESSION['first_name'] = $user['Fname'];
+        $_SESSION['last_name'] = $user['Lname'];
+        $_SESSION['active'] = $user['active'];
+        
+        // This is how we'll know the user is logged in
+        $_SESSION['logged_in'] = true;
+
         header("location: profile.php");
+    }
     }
     else {
         $_SESSION['message'] = "You have entered wrong password, try again!";
         header("location: ../Controller/error.php");
     }
 }
-
