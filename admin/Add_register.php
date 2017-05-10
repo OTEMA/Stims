@@ -70,7 +70,7 @@ $result2 = $mysqli->query("SELECT * FROM programs") or die($mysqli->error);
         <div class="rows">
             <div class="col-sm-6 col-md-3">
             </div>
-            <div class="col-sm-6 col-md-7 ">
+            <div class="col-sm-6 col-md-7">
                 <form action="Register_student.php" method="POST" class="login">
                     <div class="form-group">
                         <label for="Fname">First Name</label>
@@ -149,6 +149,11 @@ $result2 = $mysqli->query("SELECT * FROM programs") or die($mysqli->error);
                     <p><img src="../resources/images/maseno20university.png" alt="Maseno Logo" class="image-responsive copyright-image"/> All rights reserved © <span id="year"></span> Lamo.<img src="../resources/images/maseno20university.png" alt="Maseno Logo" class="image-responsive copyright-image"/>
                     </p>
                 </div>
-                <script src="../resources/js/Copyright.js" type="text/javascript"></script>
-                </body>
-                </html>
+            </div>
+            <div class="col-md-2">
+                
+            </div>
+        </div>
+            <script src="../resources/js/Copyright.js" type="text/javascript"></script>
+    </body>
+</html>
