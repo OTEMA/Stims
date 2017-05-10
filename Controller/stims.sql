@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 04, 2017 at 03:22 PM
+-- Generation Time: May 06, 2017 at 10:49 AM
 -- Server version: 5.7.14
 -- PHP Version: 7.0.10
 
@@ -19,18 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `stims`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `courses`
---
-
-CREATE TABLE `courses` (
-  `Prog_Id` int(11) NOT NULL,
-  `Course_Name` varchar(100) NOT NULL,
-  `Course_Code` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -63,7 +51,6 @@ CREATE TABLE `fees` (
   `AdmNo` varchar(30) NOT NULL,
   `Fee` int(11) DEFAULT NULL,
   `Amount_Paid` int(11) NOT NULL,
-  `Balance` int(11) NOT NULL,
   `Date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -108,8 +95,8 @@ INSERT INTO `programs` (`Prog_name`, `Prog_Id`, `Department_id`) VALUES
 
 CREATE TABLE `results` (
   `id` int(11) NOT NULL,
-  `Course_code` varchar(10) NOT NULL,
-  `Course_name` varchar(100) NOT NULL,
+  `Unit_code` varchar(10) NOT NULL,
+  `Unit_name` varchar(100) NOT NULL,
   `AdmNo` varchar(30) NOT NULL,
   `Results` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -147,12 +134,10 @@ CREATE TABLE `students` (
   `DOB` varchar(50) NOT NULL,
   `DOA` varchar(50) NOT NULL,
   `IdNo` varchar(12) NOT NULL,
-  `School` varchar(255) NOT NULL,
-  `Dept` varchar(255) NOT NULL,
-  `Prog_Id` int(11) NOT NULL,
   `Tel` varchar(20) NOT NULL,
   `Email` varchar(60) NOT NULL,
   `Password` varchar(60) NOT NULL,
+  `Image` blob,
   `Hash` varchar(255) NOT NULL,
   `active` tinyint(4) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -161,8 +146,20 @@ CREATE TABLE `students` (
 -- Dumping data for table `students`
 --
 
-INSERT INTO `students` (`Fname`, `Mname`, `Lname`, `AdmNo`, `DOB`, `DOA`, `IdNo`, `School`, `Dept`, `Prog_Id`, `Tel`, `Email`, `Password`, `Hash`, `active`) VALUES
-('Test', 'Test', 'Test', 'test', '04/18/2017', '04/18/2017', 'test', 'Computing and Informatics', 'IT', 5, '0702293572', 'o2jose43@gmail.com', '$2y$10$4EhfVfea.2uxx2ZR7wM39.pr00Ew6m7uyMEBKS4OLdgM289k8t5tS', '0336dcbab05b9d5ad24f4333c7658a0e', 0);
+INSERT INTO `students` (`Fname`, `Mname`, `Lname`, `AdmNo`, `DOB`, `DOA`, `IdNo`, `Tel`, `Email`, `Password`, `Image`, `Hash`, `active`) VALUES
+('Test', 'Test', 'Test', 'test', '04/18/2017', '04/18/2017', 'test', '0702293572', 'o2jose43@gmail.com', '$2y$10$4EhfVfea.2uxx2ZR7wM39.pr00Ew6m7uyMEBKS4OLdgM289k8t5tS', NULL, '0336dcbab05b9d5ad24f4333c7658a0e', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `units`
+--
+
+CREATE TABLE `units` (
+  `Prog_Id` int(11) NOT NULL,
+  `Unit_Name` varchar(100) NOT NULL,
+  `Unit_Code` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -198,15 +195,6 @@ INSERT INTO `users` (`Fname`, `Mname`, `Lname`, `StaffNo`, `IdNo`, `Tel`, `Email
 --
 
 --
--- Indexes for table `courses`
---
-ALTER TABLE `courses`
-  ADD PRIMARY KEY (`Course_Code`),
-  ADD KEY `AdmNo` (`Prog_Id`),
-  ADD KEY `AdmNo_2` (`Prog_Id`),
-  ADD KEY `Prog_Id` (`Prog_Id`);
-
---
 -- Indexes for table `department`
 --
 ALTER TABLE `department`
@@ -240,7 +228,7 @@ ALTER TABLE `programs`
 --
 ALTER TABLE `results`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `Course_code` (`Course_code`),
+  ADD KEY `Course_code` (`Unit_code`),
   ADD KEY `AdmNo` (`AdmNo`);
 
 --
@@ -254,7 +242,15 @@ ALTER TABLE `schools`
 --
 ALTER TABLE `students`
   ADD PRIMARY KEY (`AdmNo`),
-  ADD UNIQUE KEY `IdNo` (`IdNo`),
+  ADD UNIQUE KEY `IdNo` (`IdNo`);
+
+--
+-- Indexes for table `units`
+--
+ALTER TABLE `units`
+  ADD PRIMARY KEY (`Unit_Code`),
+  ADD KEY `AdmNo` (`Prog_Id`),
+  ADD KEY `AdmNo_2` (`Prog_Id`),
   ADD KEY `Prog_Id` (`Prog_Id`);
 
 --
@@ -298,12 +294,6 @@ ALTER TABLE `schools`
 --
 
 --
--- Constraints for table `courses`
---
-ALTER TABLE `courses`
-  ADD CONSTRAINT `courses_ibfk_1` FOREIGN KEY (`Prog_Id`) REFERENCES `programs` (`Prog_Id`);
-
---
 -- Constraints for table `department`
 --
 ALTER TABLE `department`
@@ -331,14 +321,14 @@ ALTER TABLE `programs`
 -- Constraints for table `results`
 --
 ALTER TABLE `results`
-  ADD CONSTRAINT `results_ibfk_1` FOREIGN KEY (`Course_code`) REFERENCES `courses` (`Course_Code`),
+  ADD CONSTRAINT `results_ibfk_1` FOREIGN KEY (`Unit_code`) REFERENCES `units` (`Unit_Code`),
   ADD CONSTRAINT `results_ibfk_2` FOREIGN KEY (`AdmNo`) REFERENCES `students` (`AdmNo`);
 
 --
--- Constraints for table `students`
+-- Constraints for table `units`
 --
-ALTER TABLE `students`
-  ADD CONSTRAINT `students_ibfk_1` FOREIGN KEY (`Prog_Id`) REFERENCES `programs` (`Prog_Id`);
+ALTER TABLE `units`
+  ADD CONSTRAINT `units_ibfk_1` FOREIGN KEY (`Prog_Id`) REFERENCES `programs` (`Prog_Id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
