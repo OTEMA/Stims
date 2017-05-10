@@ -147,7 +147,7 @@ session_start();
                 </div>  
             </div><!-- tab-content -->
         </div> <!-- /form -->
-        <div class="slideleft1">
+        <div class="slideleft">
             <p><img src="../resources/images/maseno20university.png" alt="Maseno Logo" class="image-responsive copyright-image"/> All rights reserved © <span id="year"></span> Lamo.<img src="../resources/images/maseno20university.png" alt="Maseno Logo" class="image-responsive copyright-image"/>
             </p>
         </div>
