@@ -89,7 +89,7 @@ if ($_SESSION['logged_in'] != 1) {
                         <li><a href="Add_register.php"> <img src="../resources/images/departments.png" alt="Departments" class="image-responsive image-circular icon"/><b>Departments</b></a></li>
                         <li><a href="Add_register.php"> <img src="../resources/images/academicprograms_icon.png" alt="Programs" class="image-responsive image-circular icon"/><b>Programs</b></a></li>
                         <li><a href="Add_register.php"> <img src="../resources/images/registericon.png" alt="Courses" class="image-responsive image-circular icon"/><b>Courses</b></a></li>
-                        <li> <a href="../Controller/logout.php"><button class="button button-block" name="logout"/>Log Out</button></a></li>
+                        <li> <a href="../Controller/logout.php"><button class="btn btn-block btn-danger" name="logout"/>Log Out</button></a></li>
                     </ul>
                 </div>
             </div>
