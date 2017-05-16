@@ -47,7 +47,7 @@ session_start();
         <a href="../index.php"><button class="button button-block"/>Home</button></a>
         <!-- Remove this once you are ready to upload to the online server
         It should only be used for remote testing-->
-              <a href="../admin/reset.php">Reset Now</a>
+              <a href="../Registrar/reset.php">Reset Now</a>
 </div>
 </body>
 </html>

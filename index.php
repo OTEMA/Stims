@@ -46,7 +46,7 @@
                         <li class="dropdown">
                             <a href="#" data-toggle="dropdown" class="dropdown-toggle"><img src="resources/images/login.png" alt="Login" class="image-responsive icon"/> <b class="caret">Login</b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="admin/index.php"> <img src="resources/images/admin.png" alt="Admin Login" class="image-responsive icon"/><i>Admin Login</i></a></li>
+                                <li><a href="Registrar/index.php"> <img src="resources/images/admin.png" alt="Admin Login" class="image-responsive icon"/><i>Admin Login</i></a></li>
                                 <li class="divider"></li>
                                 <li><a href="student/index.php"> <img src="resources/images/student-xxl.png" alt="Student Login" class="image-responsive icon"/><i>Student Login</i></a></li>
                             </ul>
@@ -58,15 +58,16 @@
         </div>
         <div id="body">
             <div class="rows">
-                <div class="col-sm-6 col-md-6 well-sm well-lg">
+                <div class="col-sm-7 col-md-4 well">
                     <p><b>Welcome to the student Information management system</b></p>
                     <p>This system allows you to view your results and other informations.
                         <br> The administrator can also upload and manage student details easily.</p>
                     <p><b class="bg-note">New users:</b> Please check your email for your log-in information.</p>
-                    <p><b class="bg-note">Existing users:</b> Proceed to your relevant login pages <a href="admin/index.php">Admin Login page </a> | <a href="student/index.php">Student Login Page</a> enter your username and password and click the Investigator log in button.</p>
+                    <p><b class="bg-note">Existing users:</b> Proceed to your relevant login pages <a href="Registrar/index.php">Admin</a> | <a href="student/index.php">Student</a> enter your username and password and click the log in button.</p>
                 </div>
-                <div class="col-sm-6 col-md-6">
+                <div class="col-sm-5 col-md-6 well">
                 </div>
+                <div class="col-md-2 well"></div>
             </div>
         </div >
     </body>
