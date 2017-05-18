@@ -84,8 +84,12 @@ if ($_SESSION['logged_in'] != 1) {
                 <div class="collapse navbar-collapse navHeaderCollapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="active"><a href="index.html"><img src="../resources/images/home.ico" alt="Home" class="image-responsive icon"/><b>Home</b></a></li>
+                        <li>
+                        <ul>
                         <li><a href="Add_register.php"> <img src="../resources/images/registericon.png" alt="Student Login" class="image-responsive icon"/><b>Register a Student</b></a></li>
-                        <li> <a href="../Controller/logout.php"><button class="button button-block" name="logout"/>Log Out</button></a></li>
+                        </ul>
+                    </li>
+                        <li> <a href="../Controller/logout.php"><button class="btn btn-block" name="logout"/>Log Out</button></a></li>
                     </ul>
                 </div>
             </div>

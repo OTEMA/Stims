@@ -13,6 +13,12 @@
 .header-text{
     
 }
+.header{
+    background-image: url("../images/Back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 .brand-img{
     height: 50px;
     width:80px;

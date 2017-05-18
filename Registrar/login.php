@@ -23,8 +23,9 @@ else { // User exists
         // This is how we'll know the user is logged in
         $_SESSION['logged_in'] = true;
 
-        header("location: Admin.php");
+        header("location: ../Admin/Admin.php");
     }
+    // User is registrar
     else{
          $_SESSION['email'] = $user['Email'];
         $_SESSION['first_name'] = $user['Fname'];

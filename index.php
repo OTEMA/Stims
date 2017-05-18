@@ -29,8 +29,8 @@
         </script>
     </head>
     <body>
-        <div id="container">
-            <img src="resources/images/msu_banner2.png" class="image-responsive header-image"/>
+        <div class="container-fluid header">
+            <!--img src="resources/images/Back.jpg" class="image-responsive"/-->
                     </div>
         <div class="navbar navbar-default navbar-static-top" data-spy="affix" data-offset-top="197" style="width: 100%; margin-top: -3.2px; padding: 0;">
             <div class="container">
