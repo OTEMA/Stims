@@ -60,7 +60,6 @@ if ($_SESSION['logged_in'] != 1) {
                 }
                 ?>
             </p>
-
             <?php
             // Keep reminding the user this account is not active, until they activate
             if (!$active) {
