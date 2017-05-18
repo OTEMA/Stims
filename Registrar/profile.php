@@ -73,8 +73,8 @@ if ($_SESSION['logged_in'] != 1) {
             ?>
             <h1 class="text-center text-primary header-text">Welcome <?php echo $first_name . ' ' . $last_name; ?>!</h1>
         </div>
-        <div class="navbar navbar-inverse navbar-static-top" data-spy="affix" data-offset-top="197" style="width: 100%; margin-top: -3.2px; padding: 0;">
-            <div class="container">
+        <div class="navbar navbar-inverse navbar-static-top" >
+            <div class="container-fluid">
                 <a href="../index.php" class="navbar-brand">STUDENT INFORMATION MANAGEMENT SYSTEM </a>
                 <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
                     <span class="icon-bar"></span>
@@ -84,12 +84,10 @@ if ($_SESSION['logged_in'] != 1) {
                 <div class="collapse navbar-collapse navHeaderCollapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="active"><a href="index.html"><img src="../resources/images/home.ico" alt="Home" class="image-responsive icon"/><b>Home</b></a></li>
-                        <li>
-                        <ul>
                         <li><a href="Add_register.php"> <img src="../resources/images/registericon.png" alt="Student Login" class="image-responsive icon"/><b>Register a Student</b></a></li>
-                        </ul>
-                    </li>
-                        <li> <a href="../Controller/logout.php"><button class="btn btn-block" name="logout"/>Log Out</button></a></li>
+                        <li><a href="#"><button class="btn btn-block btn-success">View Students</button></a></li>
+                        <li> <a href="../Controller/logout.php"><button class="btn btn-block btn-danger" name="logout"/>Log Out</button></a></li>
+                        
                     </ul>
                 </div>
             </div>
