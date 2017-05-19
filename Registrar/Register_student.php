@@ -27,13 +27,15 @@ if ($result->num_rows > 0) {
     $_SESSION['message'] = 'Student already exists!';
     header("location: ../Controller/error.php");
 } else {
-    $sql = "INSERT INTO students (Fname, Mname, Lname, AdmNo, DOB, DOA, IdNo, School, Dept, Prog_Id, Tel, Email, Password, Hash)"
+    $sql = "INSERT INTO students (Fname, Mname, Lname, AdmNo, Prog_Id, DOB, DOA, IdNo, Tel, Email, Password, Hash)"
             . " VALUES "
-            . "('$Fname','$Mname','$Lname','$AdmNo','$date','$date1','$IdNo','$SC','$Dept','$program', '$Tel', '$email','$password', '$hash')";
+            . "('$Fname','$Mname','$Lname','$AdmNo','$program','$date','$date1','$IdNo', '$Tel', '$email','$password', '$hash')";
     if ($mysqli->query($sql)) {
-
+        $sql2 = "INSERT INTO fees (AdmNo) VALUES('$AdmNo')";
+if($mysqli->query($sql2)){
+    
         $_SESSION['active'] = 0; //0 until user activates their account with verify.php
-        $_SESSION['message'] = "User Added successully!";
+        $_SESSION['message'] = "Student Registered successully!";
 
         // Send registration confirmation link (verify.php)
         $to = $email;
@@ -50,6 +52,10 @@ if ($result->num_rows > 0) {
         mail($to, $subject, $message_body);
 
         header("location: Add_register.php");
+        }
+        else{
+            die($mysqli->error);
+        }
     } else {
         $_SESSION['message'] = 'Registration failed!';
         header("location: ../Controller/error.php");
