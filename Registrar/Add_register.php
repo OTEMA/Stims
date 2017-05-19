@@ -1,13 +1,10 @@
 <?php
 require '../Controller/db.php';
 session_start();
-
-
 if ($_SESSION['logged_in'] != 1) {
     $_SESSION['message'] = "You must log in before viewing your profile page!";
     header("location: ../Controller/error.php");
 } else {
-
     $first_name = $_SESSION['first_name'];
     $last_name = $_SESSION['last_name'];
     $email = $_SESSION['email'];
@@ -57,7 +54,6 @@ $result2 = $mysqli->query("SELECT * FROM programs") or die($mysqli->error);
                 a.src = g;
                 m.parentNode.insertBefore(a, m);
             })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
             ga('create', 'UA-40923671-1', 'websiteurl');
             ga('send', 'pageview');
         </script>
@@ -67,10 +63,10 @@ $result2 = $mysqli->query("SELECT * FROM programs") or die($mysqli->error);
             <img src="../resources/images/Back.jpg" class="image-responsive header-image"/>
             <h1 class="text-center text-success header-text" style="margin-top:-50px;">You are Logged in as <?php echo $first_name . ' ' . $last_name; ?>!</h1>
             <div class="buttons">
-            <a href="../Controller/logout.php" style="float:right;"><button class="btn btn-block btn-danger" name="logout"/>Log Out</button></a>
-            <a href="profile.php" style="float:right;"><button class="btn btn-block btn-success" name="logout"/>Home</button></a>
+                <a href="../Controller/logout.php" style="float:right;"><button class="btn btn-block btn-danger" name="logout"/>Log Out</button></a>
+                <a href="profile.php" style="float:right;"><button class="btn btn-block btn-success" name="logout"/>Home</button></a>
             </div>
-            </div>
+        </div>
         <div class="rows">
             <div class="col-sm-6 col-md-3">
             </div>
@@ -155,9 +151,8 @@ $result2 = $mysqli->query("SELECT * FROM programs") or die($mysqli->error);
                 </div>
             </div>
             <div class="col-md-2">
-                
             </div>
         </div>
-            <script src="../resources/js/Copyright.js" type="text/javascript"></script>
+        <script src="../resources/js/Copyright.js" type="text/javascript"></script>
     </body>
 </html>
