@@ -1,5 +1,6 @@
 <?php
 require '../Controller/db.php';
+
 session_start();
 
 
@@ -87,54 +88,20 @@ if ($_SESSION['logged_in'] != 1) {
                         <li><a href="Add_register.php"> <img src="../resources/images/registericon.png" alt="Student Login" class="image-responsive icon"/><b>Register a Student</b></a></li>
                         <li><a href="#"><button class="btn btn-block btn-success" onclick="ViewStudents()">View Students</button></a></li>
                         <li> <a href="../Controller/logout.php"><button class="btn btn-block btn-danger" name="logout"/>Log Out</button></a></li>
-
                     </ul>
                 </div>
             </div>
         </div>
         <div class="container">
-            <div class="rows">
+            <div class="rows" id="std-details">
                 <div class="col-sm-12 col-md-12 well">
                     <?php
-                    
-
-                    echo "<table border='1'>
-<tr>
-<th>Admission NO</th>
-<th>Date Of Admission</th>
-<th>Last Name</th>
-<th>Middle Name</th>
-<th>First Name</th>
-<th>Date Of Birth</th>
-<th>ID NO</th>
-<th>Email</th>
-<th>Tel</th>
-<th>Image</th>
-</tr>";
-
-                    while ($row = mysqli_fetch_array($result)) {
-                        echo "<tr>";
-                        echo "<td>" . $row['AdmNo'] . "</td>";
-                        echo "<td>" . $row['DOA'] . "</td>";
-                        echo "<td>" . $row['Lname'] . "</td>";
-                        echo "<td>" . $row['Mname'] . "</td>";
-                        echo "<td>" . $row['Fname'] . "</td>";
-                        echo "<td>" . $row['DOB'] . "</td>";
-                        echo "<td>" . $row['IdNo'] . "</td>";
-                        echo "<td>" . $row['Email'] . "</td>";
-                        echo "<td>" . $row['Tel'] . "</td>";
-                        echo "<td>" . $row['Image'] . "</td>";
-                        echo "</tr>";
-                    }
-                    echo "</table>";
-
-                    $mysqli->close();
+                    include 'studentsFn.php';
                     ?>
                 </div>
             </div>
         </div>
         <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-        <script src="js/index.js"></script>
-
+        <script src="../resources/js/index.js" type="text/javascript"></script>
     </body>
 </html>

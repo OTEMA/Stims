@@ -41,8 +41,11 @@ $('.tab a').on('click', function (e) {
     $(target).fadeIn(600);
 
 });
-function openPageOne() {
-    document.getElementById('page1').style.display = "block"; //make page one visible
-    document.getElementById('page2').style.display = "none"; //make page two invisible
-    document.getElementById('page3').style.display = "none"; //ensure page three is not displayed
-}
+$(document).ready(function ViewStudents() {
+    //if( document.getElementById('std-details').style.display === "none"){
+        document.getElementById('std-details').style.display = "block";
+    //}
+    //else{
+        //document.getElementById('std-details').style.display = "none";
+    //}
+});

@@ -222,3 +222,6 @@ margin-top: 50px;
     border-radius: 1%;
     border: 5px solid #000033; 
 }
+#std-details{
+    display: none;
+}
