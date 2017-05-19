@@ -63,8 +63,8 @@ $result2 = $mysqli->query("SELECT * FROM programs") or die($mysqli->error);
         </script>
     </head>
     <body>
-        <div id="container">
-            <img src="../resources/images/msu_banner2.png" class="image-responsive header-image"/>
+        <div id="container-fluid">
+            <img src="../resources/images/Back.jpg" class="image-responsive header-image"/>
             <h1 class="text-center text-primary header-text" style="margin-top:-50px;">You are Logged in as <?php echo $first_name . ' ' . $last_name; ?>!</h1><a href="../Controller/logout.php" style="float:right;"><button class="button button-block" name="logout"/>Log Out</button></a>
         </div>
         <div class="rows">
