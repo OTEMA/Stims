@@ -20,8 +20,6 @@ $hash = $mysqli->escape_string(md5(rand(0, 1000)));
 
 // Check if Admission number and Id Number already exists
 $result = $mysqli->query("SELECT * FROM students WHERE AdmNo='$AdmNo' OR IdNo='$IdNo'") or die($mysqli->error);
-
-
 if ($result->num_rows > 0) {
 
     $_SESSION['message'] = 'Student already exists!';
