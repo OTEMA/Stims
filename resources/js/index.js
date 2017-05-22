@@ -42,10 +42,10 @@ $('.tab a').on('click', function (e) {
 
 });
 $(document).ready(function ViewStudents() {
-    //if( document.getElementById('std-details').style.display === "none"){
+    if( document.getElementById('std-details').style.display === "none"){
         document.getElementById('std-details').style.display = "block";
-    //}
-    //else{
-        //document.getElementById('std-details').style.display = "none";
-    //}
+    }
+    else{
+        document.getElementById('std-details').style.display = "none";
+    }
 });
