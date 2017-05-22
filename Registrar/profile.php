@@ -86,13 +86,13 @@ if ($_SESSION['logged_in'] != 1) {
                     <ul class="nav navbar-nav navbar-right">
                         <li class="active"><a href="index.html"><img src="../resources/images/home.ico" alt="Home" class="image-responsive icon"/><b>Home</b></a></li>
                         <li><a href="Add_register.php"> <img src="../resources/images/registericon.png" alt="Student Login" class="image-responsive icon"/><b>Register a Student</b></a></li>
-                        <li><a href="#"><button class="btn btn-block btn-success" onclick="ViewStudents()">View Students</button></a></li>
+                        <li><button class="btn btn-block btn-success" onclick="ViewStudents()">View Students</button></li>
                         <li> <a href="../Controller/logout.php"><button class="btn btn-block btn-danger" name="logout"/>Log Out</button></a></li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container-fluid">
             <div class="rows" id="std-details">
                 <div class="col-sm-12 col-md-12 well">
                     <?php
@@ -103,5 +103,15 @@ if ($_SESSION['logged_in'] != 1) {
         </div>
         <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
         <script src="../resources/js/index.js" type="text/javascript"></script>
+        <script>
+                            $(document).ready(function ViewStudents() {
+                                if (document.getElementById('std-details').style.display === "none") {
+                                    document.getElementById('std-details').style.display = "block";
+                                }
+                                else {
+                                    document.getElementById('std-details').style.display = "none";
+                                }
+                            });
+        </script>
     </body>
 </html>
