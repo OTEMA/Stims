@@ -22,7 +22,7 @@ $hash = $mysqli->escape_string(md5(rand(0, 1000)));
 $result = $mysqli->query("SELECT * FROM students WHERE AdmNo='$AdmNo' OR IdNo='$IdNo' OR Email='$email'") or die($mysqli->error);
 if ($result->num_rows > 0) {
 
-    $_SESSION['message'] = 'Student already exists!';
+    $_SESSION['message'] = 'Student with the same admission number, Id Number or Email already exists!';
     header("location: ../Controller/error.php");
 } else {
     $sql = "INSERT INTO students (Fname, Mname, Lname, AdmNo, Prog_Id, DOB, DOA, IdNo, Tel, Email, Password, Hash)"
