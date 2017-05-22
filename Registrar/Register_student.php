@@ -24,7 +24,9 @@ if ($result->num_rows > 0) {
 
     $_SESSION['message'] = 'Student with the same admission number, Id Number or Email already exists!';
     header("location: ../Controller/error.php");
-} else {
+    $mysqli->close();
+} 
+else {
     $sql = "INSERT INTO students (Fname, Mname, Lname, AdmNo, Prog_Id, DOB, DOA, IdNo, Tel, Email, Password, Hash)"
             . " VALUES "
             . "('$Fname','$Mname','$Lname','$AdmNo','$program','$date','$date1','$IdNo', '$Tel', '$email','$password', '$hash')";
