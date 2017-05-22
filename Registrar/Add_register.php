@@ -64,7 +64,7 @@ $result2 = $mysqli->query("SELECT * FROM programs") or die($mysqli->error);
             <h1 class="text-center text-success header-text" style="margin-top:-50px;">You are Logged in as <?php echo $first_name . ' ' . $last_name; ?>!</h1>
             <div class="buttons">
                 <a href="../Controller/logout.php" style="float:right;"><button class="btn btn-block btn-danger" name="logout"/>Log Out</button></a>
-                <a href="profile.php" style="float:right;"><button class="btn btn-block btn-success" name="logout"/>Home</button></a>
+                <a href="profile.php" style="float:right;"><button class="btn btn-block btn-success" name="home"/>Home</button></a>
             </div>
         </div>
         <div class="rows">
