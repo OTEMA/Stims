@@ -223,7 +223,7 @@ margin-top: 50px;
     border: 5px solid #000033; 
 }
 #std-details{
-    display: none;
+    display:none;
 }
 .buttons{
     text-align: center;
