@@ -9,6 +9,9 @@
         <link href="resources/css/font-awesome.css" rel="stylesheet" type="text/css"/>
         <link href="resources/css/bootstrap.css" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
         <!--  JavaScript files-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -31,7 +34,7 @@
     <body>
         <div class="container-fluid header">
             <!--img src="resources/images/Back.jpg" class="image-responsive"/-->
-                    </div>
+        </div>
         <div class="navbar navbar-default navbar-static-top" data-spy="affix" data-offset-top="197" style="width: 100%; margin-top: -3.2px; padding: 0;">
             <div class="container">
                 <a href="http://www.maseno.ac.ke" class="navbar-brand">STUDENT INFORMATION MANAGEMENT SYSTEM </a>
