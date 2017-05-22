@@ -2,10 +2,9 @@
 require '../Controller/db.php';
 $result = $mysqli->query("select students.*,programs.prog_name from students join programs on students.prog_id=programs.prog_id");
 ?>
- <table class="table table-striped">
-    <div class='table responsive'>
-        <thead class="thead-inverse">
-            <tr>
+ <table class="table table-bordered table-striped table-hover table-responsive">
+            <thead>
+            <tr class="bg-primary">
                 <th></th>
                 <th>Admission NO</th>
                 <th>Date Of Admission</th>
@@ -17,8 +16,7 @@ $result = $mysqli->query("select students.*,programs.prog_name from students joi
                 <th>Tel</th>
                 <th>Image</th>
                 <th>Update</th>
-                <th>Delete</th>
-            </tr>
+                            </tr>
         </thead>
 
         <?php
@@ -45,5 +43,4 @@ $result = $mysqli->query("select students.*,programs.prog_name from students joi
                 <td colspan="3" align="center" bgcolor="#FFFFFF"><input name="delete" type="submit" id="delete" value="Delete" class="btn btn-block btn-danger"></td>
             </tr>
         </tbody>
-    </div>
- </table>
+     </table>
