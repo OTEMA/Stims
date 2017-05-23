@@ -11,7 +11,6 @@
     margin-left:-25px;
 }
 .header-text{
-    
 }
 .header{
     background-image: url("../images/Back.jpg");
@@ -228,4 +227,7 @@ margin-top: 50px;
 .buttons{
     text-align: center;
     padding: 0 25px 0 0;
+}
+.controls{
+    float: right;
 }
