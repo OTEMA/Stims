@@ -11,7 +11,7 @@ A breech of this may lead to prosecution.
     </head>
     <body>
         <?php
-        // put your code here
+        
         ?>
     </body>
 </html>
