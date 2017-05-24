@@ -18,7 +18,7 @@ $hash = $mysqli->escape_string( md5( rand(0,1000) ) );
 $isAdmin = 0;
 
 // Check if user email and Staff id already exists
-$result = $mysqli->query("SELECT * FROM users WHERE Email='$email' AND StaffNo='$StaffNo'") or die($mysqli->error);
+$result = $mysqli->query("SELECT * FROM staffs WHERE Email='$email' AND StaffNo='$StaffNo'") or die($mysqli->error);
 
 // We know user email exists if the rows returned are more than 0
 if ( $result->num_rows > 0 ) {
@@ -30,7 +30,7 @@ if ( $result->num_rows > 0 ) {
 else { // Email doesn't already exist in a database, proceed...
 
     // active is 0 by DEFAULT (no need to include it here)
-    $sql = "INSERT INTO users (Fname, Mname, Lname, StaffNo, IdNo, Tel, Email, Password, Hash, Is_Admin) VALUES ('$first_name','$Mname','$last_name','$StaffNo','$IdNo','$Tel', '$email','$password', '$hash', '$isAdmin')";
+    $sql = "INSERT INTO staffs (Fname, Mname, Lname, StaffNo, IdNo, Tel, Email, Password, Hash, Is_Admin) VALUES ('$first_name','$Mname','$last_name','$StaffNo','$IdNo','$Tel', '$email','$password', '$hash', '$isAdmin')";
     // Add user to the database
     if ( $mysqli->query($sql) ){
 
