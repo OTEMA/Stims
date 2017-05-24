@@ -3,7 +3,7 @@
 
 // Escape email to protect against SQL injections
 $Staffno = $mysqli->escape_string($_POST['Staffno']);
-$result = $mysqli->query("SELECT * FROM users WHERE StaffNo='$Staffno'");
+$result = $mysqli->query("SELECT * FROM staffs WHERE StaffNo='$Staffno'");
 
 if ( $result->num_rows == 0 ){ // User doesn't exist
     $_SESSION['message'] = "That user does not exist!";
