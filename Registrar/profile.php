@@ -87,6 +87,7 @@ if ($_SESSION['logged_in'] != 1) {
                         <li class="active"><a href="index.html"><img src="../resources/images/home.ico" alt="Home" class="image-responsive icon"/><b>Home</b></a></li>
                         <li><a href="Add_register.php"> <img src="../resources/images/registericon.png" alt="Student Login" class="image-responsive icon"/><b>Register a Student</b></a></li>
                         <li><button class="btn btn-block btn-success" onclick="ViewStudents()">View Students</button></li>
+                        <li><a href="reset.php"><button class="btn btn-block btn-info">Change password</button></a></li>
                         <li> <a href="../Controller/logout.php"><button class="btn btn-block btn-danger" name="logout"/>Log Out</button></a></li>
                     </ul>
                 </div>
