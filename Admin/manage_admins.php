@@ -12,7 +12,7 @@ if ($_SESSION['logged_in'] != 1) {
 }
 ?>
 <!DOCTYPE html>
-<html>
+<html>    
     <head>
         <meta charset="UTF-8">
         <title>Admin</title>
@@ -69,9 +69,79 @@ if ($_SESSION['logged_in'] != 1) {
             }
             ?>
         </div>
-        <div class="buttons">
-            <a href="Admin.php" style="float: right;"><button class="btn btn-block bg-primary">Back</button></a>
-            <a href="../Controller/logout.php" style="float: right;"><button class="btn btn-block btn-danger">LOG OUT</button></a>
+        <div class="row">
+            <div class="col-sm-3 col-md-1 well">
+                <div class="bg-info">
+                    <h1 class="text-center text-primary">Nav</h1>
+                </div>
+                <div class="buttons">
+                    <ul>
+                        <li><a href="Admin.php"><button class="btn btn-block bg-primary">Back</button></a></li>
+                        <li><a href="Admin_promo.php"><button class="btn btn-block btn-success">Edit Admin </button></a></li>
+                        <li> <a href="../Controller/logout.php"><button class="btn btn-block btn-danger">LOG OUT</button></a></li>
+                    </ul>
+                </div>
+            </div> 
+            <div class="col-sm-9 col-md-11">
+                <div class="admin-show">
+                    <table width="400" border="0" cellspacing="1" cellpadding="0">
+                        <tr>
+                            <td>
+                                <form name="form1" method="post" action="">
+                                    <table class="table table-bordered table-striped table-hover table-responsive">
+                                        <thead>
+                                            <tr class="bg-primary">
+                                                <th>#</th>
+                                                <th>Staff NO</th>
+                                                <th>Date Of Employment</th>
+                                                <th>Department</th>
+                                                <th>Role</th>
+                                                <th>Name</th>
+                                                <th>ID NO</th>
+                                                <th>Email</th>
+                                                <th>Tel</th>
+                                                <th>Image</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <?php
+                                        require '../Controller/db.php';
+                                        $result = $mysqli->query("select staffs.*,department.Dept_Name from staffs join department on staffs.Department_id=department.Department_id");
+                                        $a = 1;
+                                        while ($row = mysqli_fetch_array($result)) {
+                                            ?>
+                                            <tbody>
+                                                <tr>
+                                                    <td align="center"><?php echo $a++; ?></td>
+                                                    <td><?php echo $row['StaffNo']; ?></td>
+                                                    <td><?php echo $row['DOE']; ?></td>
+                                                    <td><?php echo $row['Dept_Name']; ?></td>
+                                                    <td><?php
+                                                        if ($row['Is_Admin'] == 1) {
+                                                            echo 'Admin';
+                                                        } else {
+                                                            echo 'Registrar';
+                                                        }
+                                                        ?></td>
+                                                    <td><?php echo $row['Lname'] . '&nbsp;' . '&nbsp;' . $row['Mname'] . '&nbsp;' . '&nbsp;' . $row['Fname']; ?></td>
+                                                    <td><?php echo $row['IdNo']; ?></td>
+                                                    <td><?php echo $row['Email']; ?></td>
+                                                    <td><?php echo $row['Tel']; ?></td>
+                                                    <td><img src="<?php echo $row['Image']; ?>"/></td>
+                                                    <td><a href='../Controller/Admin_promo.php?staffno=<?php echo $row['StaffNo']; ?>' class="btn btn-block btn-danger">Promote</a></td>
+                                                </tr>
+                                                <?php
+                                            }
+                                            $mysqli->close();
+                                            ?>
+                                        </tbody>
+                                    </table>
+                                </form>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
     </body>
 </html>
