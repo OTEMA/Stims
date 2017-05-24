@@ -51,7 +51,7 @@ if($mysqli->query($sql2)){
 
         mail($to, $subject, $message_body);
 
-        header("location: Add_register.php");
+        header("location: profile.php");
         }
         else{
             die($mysqli->error);
