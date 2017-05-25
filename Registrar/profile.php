@@ -97,7 +97,7 @@ if ($_SESSION['logged_in'] != 1) {
             <div id="std-details">
                 
                     <?php
-                    include 'studentsFn.php';
+                    include '../Controller/studentsFn.php';
                     ?>
             </div>
         </div>
