@@ -1,6 +1,6 @@
 <?php
 require 'db.php';
-$result = $mysqli->query("select department.*,schools.School_name from department join schools on department.School_id=schools.School_id");
+$result = $mysqli->query("select department.*,schools.School_name from department join schools on department.School_id=schools.School_id ORDER BY Dept_Name ASC");
 ?>
 <table width="400" border="0" cellspacing="1" cellpadding="0">
     <tr>
