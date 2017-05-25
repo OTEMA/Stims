@@ -34,6 +34,20 @@ session_start();
         </script>
     </head>
     <body>
+         <div class="row">
+            <div class="col-sm-3 col-md-3 well">
+                <div class="bg-info">
+                    <h1 class="text-center text-primary">Nav</h1>
+                </div>
+                <div class="buttons">
+                    <ul style="list-style: none; float: contour;">
+                        <li style="margin-bottom: 10px;"><a href="Admin.php"><button class="btn btn-block bg-primary">Back</button></a></li>
+                        <li style="margin-bottom: 10px; margin-top: 10px;"><a href="Admin_promo.php"><button class="btn btn-block btn-success">Edit Admin </button></a></li>
+                        <li style="margin-top: 10px;"> <a href="../Controller/logout.php"><button class="btn btn-block btn-danger">LOG OUT</button></a></li>
+                    </ul>
+                </div>
+            </div> 
+            <div class="col-sm-9 col-md-9 well">
         <div class="form">
             <ul class="tab-group">
                 <li class="tab"><a href="#addschools">Add schools</a></li>
@@ -48,13 +62,13 @@ session_start();
                 <div id="addschools">   
                     <h1 style="color: #FFFFFF;">Enter all the relevant details here</h1>
 
-                    <form action="index.php" method="post">
+                    <form action="../Controller/addsc.php" method="post">
 
                         <div class="top-row">
                             <div class="form-group field-wrap">
                                 <label>Name<span class="req">*ex education</span>
                                 </label>
-                                <input type="text" required autocomplete="on" name='firstname' style="color: #FFFFFF;" />
+                                <input type="text" required autocomplete="on" name='scname' style="color: #FFFFFF;" />
                             </div>
                         </div>
                         <div class="form-group field-wrap">
@@ -64,6 +78,8 @@ session_start();
                 </div>  
             </div><!-- tab-content -->
         </div> <!-- /form -->
+            </div>
+         </div>
         <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
         <script src="../resources/js/index.js"></script>
         <script src="../resources/js/Copyright.js" type="text/javascript"></script>
