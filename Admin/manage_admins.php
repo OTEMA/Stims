@@ -70,19 +70,20 @@ if ($_SESSION['logged_in'] != 1) {
             ?>
         </div>
         <div class="row">
-            <div class="col-sm-3 col-md-1 well">
+            <div class="col-sm-3 col-md-2 well">
                 <div class="bg-info">
                     <h1 class="text-center text-primary">Nav</h1>
                 </div>
                 <div class="buttons">
                     <ul>
                         <li><a href="Admin.php"><button class="btn btn-block bg-primary">Back</button></a></li>
-                        <li><a href="Admin_promo.php"><button class="btn btn-block btn-success">Edit Admin </button></a></li>
+                        <li><a href="manage_schools.php"><button class="btn btn-block btn-success">Manage schools </button></a></li>
+                        <li><a href="manage_departments.php"><button class="btn btn-block btn-success">Manage Departments </button></a></li>
                         <li> <a href="../Controller/logout.php"><button class="btn btn-block btn-danger">LOG OUT</button></a></li>
                     </ul>
                 </div>
             </div> 
-            <div class="col-sm-9 col-md-11">
+            <div class="col-sm-9 col-md-10">
                 <div class="admin-show">
                     <table width="400" border="0" cellspacing="1" cellpadding="0">
                         <tr>
