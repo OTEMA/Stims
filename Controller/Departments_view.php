@@ -11,6 +11,7 @@ $result = $mysqli->query("select department.*,schools.School_name from departmen
                         <tr class="bg-primary">
                             <th>#</th>
                             <th>Name</th>
+                            <th>School</th>
                             <th>action</th>
                         </tr>
                     </thead>
@@ -21,6 +22,7 @@ $result = $mysqli->query("select department.*,schools.School_name from departmen
                         <tbody>
                             <tr>
                                 <td align="center"><?php echo $a++; ?></td>
+                                <td><?php echo $row['Dept_Name']; ?></td>
                                 <td><?php echo $row['School_name']; ?></td>
                                 <td><a href='../Controller/deletedp.php?id=<?php echo $row['Department_id']; ?>' class="btn btn-block btn-danger"> delete</a></td>
                             </tr>
