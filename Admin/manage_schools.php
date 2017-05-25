@@ -42,7 +42,8 @@ session_start();
                 <div class="buttons">
                     <ul style="list-style: none; float: contour;">
                         <li style="margin-bottom: 10px;"><a href="Admin.php"><button class="btn btn-block bg-primary">Back</button></a></li>
-                        <li style="margin-bottom: 10px; margin-top: 10px;"><a href="Admin_promo.php"><button class="btn btn-block btn-success">Edit Admin </button></a></li>
+                        <li style="margin-bottom: 10px; margin-top: 10px;"><a href="manage_admins.php"><button class="btn btn-block btn-success">Manage Admin </button></a></li>
+                        <li><a href="manage_departments.php"><button class="btn btn-block btn-success">Manage Departments </button></a></li>
                         <li style="margin-top: 10px;"> <a href="../Controller/logout.php"><button class="btn btn-block btn-danger">LOG OUT</button></a></li>
                     </ul>
                 </div>
