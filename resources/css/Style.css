@@ -148,8 +148,6 @@ nav.navbar.navbar-default {
     font-size: .8em;
     line-height: 50px;
     letter-spacing: 2px;
-    //background: url(../images/student-xxl.png);
-    //background-repeat: no-repeat;
     background-size: cover;
     text-transform: uppercase;
 }
@@ -215,8 +213,8 @@ nav.navbar.navbar-default {
     background-image: url("../resources/images/Login.jpg");
 }
 .reset{
-margin-top: 100px;
-margin-top: 50px;
+    margin-top: 100px;
+    margin-top: 50px;
     padding: 25px;
     border-radius: 1%;
     border: 5px solid #000033; 
