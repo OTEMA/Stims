@@ -78,7 +78,7 @@ if ($_SESSION['logged_in'] != 1) {
                     <ul>
                         <li><a href="Admin.php"><button class="btn btn-block bg-primary">Back</button></a></li>
                         <li><a href="manage_schools.php"><button class="btn btn-block btn-success">Manage schools </button></a></li>
-                        <li><a href="manage_departments.php"><button class="btn btn-block btn-success">Manage Departments </button></a></li>
+                        <li><a href="manage_departments.php"><button class="btn btn-block btn-warning">Manage Departments </button></a></li>
                         <li> <a href="../Controller/logout.php"><button class="btn btn-block btn-danger">LOG OUT</button></a></li>
                     </ul>
                 </div>
@@ -107,7 +107,7 @@ if ($_SESSION['logged_in'] != 1) {
                                         </thead>
                                         <?php
                                         require '../Controller/db.php';
-                                        $result = $mysqli->query("select staffs.*,department.Dept_Name from staffs join department on staffs.Department_id=department.Department_id");
+                                        $result = $mysqli->query("select staffs.Fname,staffs.Mname,staffs.Lname,staffs.StaffNo,staffs.IdNo,staffs.Tel,staffs.Email,staffs.Is_Admin,staffs.Image,Date(DOE),department.Dept_Name from staffs join department on staffs.Department=department.Department_id")or die($mysqli->error);
                                         $a = 1;
                                         while ($row = mysqli_fetch_array($result)) {
                                             ?>
@@ -115,7 +115,7 @@ if ($_SESSION['logged_in'] != 1) {
                                                 <tr>
                                                     <td align="center"><?php echo $a++; ?></td>
                                                     <td><?php echo $row['StaffNo']; ?></td>
-                                                    <td><?php echo $row['DOE']; ?></td>
+                                                    <td><?php echo $row['Date(DOE)']; ?></td>
                                                     <td><?php echo $row['Dept_Name']; ?></td>
                                                     <td><?php
                                                         if ($row['Is_Admin'] == 1) {
