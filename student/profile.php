@@ -45,6 +45,12 @@ if ($_SESSION['logged_in'] != 1) {
             ga('create', 'UA-40923671-1', 'websiteurl');
             ga('send', 'pageview');
         </script>
+        <style>
+            ul li{
+                text-decoration: none;
+                list-style: none;
+            }
+        </style>
     </head>
     <body>
         <div class="container-fluid header">
@@ -71,10 +77,10 @@ if ($_SESSION['logged_in'] != 1) {
               </div>';
             }
             ?>
-                     </div>
-        <div class="navbar navbar-default navbar-static-top" data-spy="affix" data-offset-top="197" style="width: 100%; margin-top: -3.2px; padding: 0;">
+        </div>
+        <div class="navbar navbar-inverse navbar-static-top" data-spy="affix" data-offset-top="197" style="width: 100%; margin-top: -3.2px; padding: 0;">
             <div class="container">
-                <a href="http://www.maseno.ac.ke" class="navbar-brand">STUDENT INFORMATION MANAGEMENT SYSTEM </a>
+                <a href="http://www.maseno.ac.ke" class="navbar-brand">HI <?php echo $first_name . ' ' ?></a>
                 <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -82,14 +88,12 @@ if ($_SESSION['logged_in'] != 1) {
                 </button>
                 <div class="collapse navbar-collapse navHeaderCollapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="index.html"><img src="../resources/images/Home.ico" alt="Home" class="image-responsive icon"/><b>Home</b></a></li>
                         <li class="dropdown">
-                            <a href="#" data-toggle="dropdown" class="dropdown-toggle"><img src="../resources/images/pROPHILE.png" alt="Prophile" class="image-responsive icon"/> <b class="glyphicon glyphicon-wrench"><?php echo $first_name . ' ' ?></b></a>
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle"><img src="../resources/images/pROPHILE.png" alt="Prophile" class="image-responsive icon"/> <b class="glyphicon glyphicon-wrench"></b></a>
                             <ul class="dropdown-menu tab-group">
-                                <li class="tab"><a href="#signup"> <img src="../resources/images/Setting.png" alt="Admin Login" class="image-responsive icon"/><i>Update Profile</i></a></li>
+                                <li><a href="profile.php"> <img src="../resources/images/Setting.png" alt="Admin Login" class="image-responsive icon"/><i>Update Profile</i></a></li>
                                 <li class="divider"></li>
-                                <li class="tab"><a href="student/index.php"> <img src="../resources/images/student-xxl.png" alt="Student Login" class="image-responsive icon"/><i>Change Password</i></a></li>
-                            
+                                <li><a href="student/index.php"> <img src="../resources/images/student-xxl.png" alt="Student Login" class="image-responsive icon"/><i>Change Password</i></a></li>
                             </ul>
                         </li>
                         <li><a href="../Controller/logout.php"><button class="btn-danger btn" value="LogOut">LogOUT</button></a></li>
@@ -98,7 +102,19 @@ if ($_SESSION['logged_in'] != 1) {
                 </div>
             </div>
         </div>
-       
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-4 col-md-3 well">
+<li class="active"><a href="index.html"><img src="../resources/images/Home.ico" alt="Home" class="image-responsive icon"/><b>Home</b></a></li>
+<li class="active"><a href="index.html"><img src="../resources/images/result.jpg" alt="Results" class="image-responsive icon"/><b>Results</b></a></li>
+                </div>
+                <div class="col-sm-8 col-md-9 well">
+
+                </div>
+            </div>
+
+        </div>
+
         <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
         <script src="../resources/js/index.js"></script>
 
