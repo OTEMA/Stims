@@ -114,6 +114,21 @@ session_start();
                                 <input type="text" required autocomplete="on" name='IdNo' style="color: #FFFFFF;" />
                             </div>
                         </div>
+                        <div class="top-row">
+                             <div class="form-group">
+                        <label for="dp">School</label>
+                        <select name="dp" id="dp" class="form-control">
+                            <option value="Select Department">Select department</option>
+                            <?php
+                            require '../Controller/db.php';
+                            $result = $mysqli->query("SELECT * FROM department") or die($mysqli->error);
+                            while ($row = mysqli_fetch_array($result)) {
+                                echo "<option value='" . $row['Department_id'] . "'>" . $row['Dept_Name'] . "</option>";
+                            }
+                            ?>        
+                        </select>
+                    </div>
+                        </div>
                         <div class="center-row">
                             <div class="form-group field-wrap">
                                 <label>
@@ -128,7 +143,7 @@ session_start();
                                 <input type="email"required autocomplete="on" name='email' style="color: #FFFFFF;" />
                             </div>
                         </div>
-                        <div class="bottom-row">
+                        <div class="top-row">
                             <div class="form-group field-wrap">
                                 <label>
                                     Set A Password<span class="req">*</span>
