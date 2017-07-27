@@ -10,6 +10,7 @@ $first_name = $mysqli->escape_string($_POST['firstname']);
 $Mname = $mysqli->escape_string($_POST['Mname']);
 $last_name = $mysqli->escape_string($_POST['lastname']);
 $StaffNo = $mysqli->escape_string($_POST['Staffno']);
+$DEPT = $mysqli->escape_string($_POST['dp']);
 $IdNo = $mysqli->escape_string($_POST['IdNo']);
 $Tel = $mysqli->escape_string($_POST['Tel']);
 $email = $mysqli->escape_string($_POST['email']);
@@ -30,7 +31,7 @@ if ( $result->num_rows > 0 ) {
 else { // Email doesn't already exist in a database, proceed...
 
     // active is 0 by DEFAULT (no need to include it here)
-    $sql = "INSERT INTO staffs (Fname, Mname, Lname, StaffNo, IdNo, Tel, Email, Password, Hash, Is_Admin) VALUES ('$first_name','$Mname','$last_name','$StaffNo','$IdNo','$Tel', '$email','$password', '$hash', '$isAdmin')";
+    $sql = "INSERT INTO staffs (Fname, Mname, Lname, StaffNo, Department, IdNo, Tel, Email, Password, Hash, Is_Admin) VALUES ('$first_name','$Mname','$last_name','$StaffNo','$DEPT','$IdNo','$Tel', '$email','$password', '$hash', '$isAdmin')";
     // Add user to the database
     if ( $mysqli->query($sql) ){
 
@@ -60,7 +61,8 @@ else { // Email doesn't already exist in a database, proceed...
     }
 
     else {
-        $_SESSION['message'] = 'Registration failed!';
+        $_SESSION['message'] = $mysqli->error;
+        //$_SESSION['message'] = 'Registration failed!';
         header("location: ../Controller/error.php");
     }
 
