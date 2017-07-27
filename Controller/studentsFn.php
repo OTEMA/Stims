@@ -1,6 +1,6 @@
 <?php
 require '../Controller/db.php';
-$result = $mysqli->query("select students.*,programs.prog_name from students join programs on students.prog_id=programs.prog_id");
+$result = $mysqli->query("select students.*,programs.prog_name from students join programs on students.prog_id=programs.prog_id") or die($mysqli->error);
 ?>
 <table width="400" border="0" cellspacing="1" cellpadding="0">
     <tr>
